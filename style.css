@@ -1,75 +1,71 @@
 /* Generales */
-body { font-family: 'Segoe UI', sans-serif; background-color: #f0f2f5; margin: 0; padding: 20px; color: #333; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f2f5; margin: 0; padding: 20px; color: #333; }
 #app { max-width: 1000px; margin: 0 auto; }
 
-/* Cabecera y Buscador */
+/* Cabecera */
 header { text-align: center; margin-bottom: 30px; }
-#search-container { margin-top: 15px; }
-#pokeSearch { width: 100%; max-width: 400px; padding: 12px 20px; border-radius: 25px; border: 2px solid #ccc; font-size: 16px; outline: none; transition: 0.3s; }
-#pokeSearch:focus { border-color: #555; }
+#pokeSearch { width: 100%; max-width: 400px; padding: 12px 20px; border-radius: 25px; border: 2px solid #ccc; font-size: 16px; outline: none; }
 
-/* Galería (Grid) */
+/* Grid de Inicio */
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 15px; }
-.card { background: white; border-radius: 12px; padding: 15px; text-align: center; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.2s, box-shadow 0.2s; }
+.card { background: white; border-radius: 12px; padding: 15px; text-align: center; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: 0.2s; }
 .card:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0,0,0,0.1); }
 .card img { width: 100px; height: 100px; object-fit: contain; }
 
-/* Iconos */
+/* Iconos de Tipo y Categoría */
 .types-row { margin-top: 10px; display: flex; justify-content: center; gap: 5px; flex-wrap: wrap; }
-.type-icon { width: 96px; height: 32px; object-fit: contain; }
-.cat-icon { width: 32px; height: 32px; object-fit: contain; }
+.type-icon { width: 90px; height: 30px; object-fit: contain; }
+.cat-icon { width: 30px; height: 30px; object-fit: contain; }
 
-/* Vista de Detalle */
+/* Detalle del Pokémon */
 .detail-view { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
 .back-btn { padding: 10px 15px; background: #333; color: white; border: none; border-radius: 8px; cursor: pointer; margin-bottom: 20px; font-weight: bold; }
 .header-ficha { display: flex; gap: 30px; align-items: center; border-bottom: 2px solid #eee; padding-bottom: 20px; margin-bottom: 20px; }
-.large-sprite { width: 150px; height: 150px; object-fit: contain; }
-.flavor-text { font-style: italic; color: #777; margin: 5px 0 15px 0; }
+.large-sprite { width: 160px; height: 160px; object-fit: contain; }
 
-/* Créditos */
-.credits-section { display: flex; gap: 20px; background: #fffde7; border: 1px dashed #fbc02d; padding: 15px; border-radius: 10px; margin-bottom: 20px; text-align: center; }
-.credit-col { flex: 1; font-size: 0.9em; }
+/* Textos de descripción */
+.category-text { font-weight: bold; color: #555; margin-bottom: 5px; }
+.flavor-text { font-style: italic; color: #777; line-height: 1.4; margin-bottom: 15px; max-width: 600px; }
 
-/* Secciones y Stats */
-.secciones-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
-.seccion { background: #f9f9f9; padding: 20px; border-radius: 12px; border: 1px solid #eaeaea; }
-.stat-row { display: flex; align-items: center; margin-bottom: 8px; font-size: 0.9em; }
-.stat-name { width: 50px; font-weight: bold; }
-.stat-num { width: 35px; text-align: right; margin-right: 10px; }
-.bar-bg { flex-grow: 1; background: #e0e0e0; height: 10px; border-radius: 5px; overflow: hidden; }
-.bar-fill { height: 100%; border-radius: 5px; }
+/* Stats y Secciones */
+.secciones-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.seccion { background: #f9f9f9; padding: 20px; border-radius: 12px; border: 1px solid #eee; }
+.stat-row { display: flex; align-items: center; margin-bottom: 8px; }
+.stat-name { width: 50px; font-weight: bold; font-size: 0.8em; }
+.stat-num { width: 35px; text-align: right; margin-right: 10px; font-weight: bold; }
+.bar-bg { flex-grow: 1; background: #ddd; height: 8px; border-radius: 4px; overflow: hidden; }
+.bar-fill { height: 100%; border-radius: 4px; }
 
 /* Habilidades */
-.hab-box { display: block; margin-bottom: 10px; padding: 12px; background: white; border-radius: 8px; border-left: 4px solid #333; border: 1px solid #ddd; }
+.hab-box { display: block; margin-bottom: 10px; padding: 12px; background: white; border-radius: 8px; border: 1px solid #ddd; border-left: 5px solid #333; }
 
-/* Evoluciones */
-.evo-container { display: flex; align-items: center; justify-content: center; gap: 30px; }
-.evo-unit { text-align: center; cursor: pointer; transition: 0.2s; }
-.evo-unit:hover { transform: scale(1.05); }
-.evo-unit img { width: 90px; height: 90px; object-fit: contain; }
-.evo-unit small { color: #d32f2f; font-weight: bold; }
-.active-evo img { border: 3px solid #333; border-radius: 50%; padding: 5px; background: #fff; }
+/* Línea Evolutiva */
+.evo-container { display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap; }
+.evo-unit { text-align: center; cursor: pointer; }
+.evo-unit img { width: 80px; height: 80px; object-fit: contain; }
+.evo-unit small { color: #c00; font-weight: bold; display: block; margin-top: 5px; }
+.active-evo img { border: 2px solid #333; border-radius: 50%; padding: 5px; background: #fff; }
 
-/* Tablas y STAB */
-table { width: 100%; border-collapse: collapse; font-size: 0.95em; text-align: left; }
-th, td { padding: 10px; border-bottom: 1px solid #eee; vertical-align: middle; }
-th { background-color: #eee; border-radius: 5px 5px 0 0; }
-.stab-row { background-color: #f1f8e9; } /* Fondo verde clarito para STAB */
+/* Tablas */
+table { width: 100%; border-collapse: collapse; margin-top: 10px; background: white; }
+th { background: #eee; padding: 10px; text-align: left; }
+td { padding: 10px; border-bottom: 1px solid #eee; }
+.stab-row { background-color: #f1f8e9; }
 
-/* Tooltips */
+/* Tooltips (Ventanas flotantes) */
 .tooltip { position: relative; cursor: help; }
 .tooltip .tooltiptext {
     visibility: hidden; width: 220px; background-color: #222; color: #fff;
-    text-align: left; padding: 12px; border-radius: 8px; position: absolute; z-index: 100;
-    bottom: 110%; left: 50%; transform: translateX(-50%); opacity: 0; transition: opacity 0.3s;
-    font-size: 0.85em; box-shadow: 0 5px 15px rgba(0,0,0,0.3); pointer-events: none;
+    padding: 12px; border-radius: 8px; position: absolute; z-index: 99;
+    bottom: 125%; left: 50%; transform: translateX(-50%); opacity: 0;
+    transition: 0.3s; font-size: 0.85em; pointer-events: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 .tooltip:hover .tooltiptext { visibility: visible; opacity: 1; }
-.tooltiptext hr { border-color: #444; margin: 8px 0; }
+.tooltiptext hr { border: 0; border-top: 1px solid #444; margin: 8px 0; }
 
-/* Responsive para móviles */
+/* Responsive */
 @media (max-width: 768px) {
     .header-ficha { flex-direction: column; text-align: center; }
     .secciones-grid { grid-template-columns: 1fr; }
-    .evo-container { flex-direction: column; gap: 15px; }
 }

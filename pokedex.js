@@ -1749,5 +1749,191 @@ const misPokes = [
             egg: []
         }
     },
+    {
+        id: "28",
+        num: 28,
+        name: "Wooper",
+        types: ["Agua", "Tierra"],
+        category: "Pez Agua",
+        flavor: "Suele vivir en el agua, pero también es posible verle en tierra en busca de comida. Cuando está en terreno firme, se cubre con una película viscosa y tóxica.",
+        credits: { design: "GameFreak", sprite: "GameFreak" },
+        stats: { hp: 55, atk: 45, def: 45, spa: 25, spd: 25, spe: 15 },
+        abilities: [
+            { type: "Habilidad 1", id: "DAMP" },
+            { type: "Habilidad 2", id: "WATERABSORB" },
+            { type: "Oculta", id: "UNAWARE" }
+        ],
+        evolution: {
+            prevo: null,
+            evos: [{ id: "29", method: "Nivel 20" }]
+        },
+        moves: {
+            level: [
+                { lv: 1, id: "WATERGUN" }, { lv: 1, id: "TAILWHIP" }, { lv: 4, id: "RAINDANCE" },
+                { lv: 8, id: "MUDSHOT" }, { lv: 12, id: "MIST" }, { lv: 12, id: "HAZE" },
+                { lv: 16, id: "SLAM" }, { lv: 21, id: "YAWN" }, { lv: 24, id: "AQUATAIL" },
+                { lv: 28, id: "MUDDYWATER" }, { lv: 32, id: "AMNESIA" }, { lv: 36, id: "TOXIC" },
+                { lv: 40, id: "EARTHQUAKE" }
+            ],
+            tutor: [
+                { id: "AFTERYOU" }, { id: "AMNESIA" }, { id: "ANCIENTPOWER" }, { id: "AQUATAIL" }, { id: "ATTRACT" },
+                { id: "BLIZZARD" }, { id: "BODYSLAM" }, { id: "BULLDOZE" }, { id: "CAPTIVATE" }, { id: "CONFIDE" },
+                { id: "DEFENSECURL" }, { id: "DIG" }, { id: "DIVE" }, { id: "DOUBLEEDGE" }, { id: "DOUBLETEAM" },
+                { id: "DYNAMICPUNCH" }, { id: "EARTHPOWER" }, { id: "EARTHQUAKE" }, { id: "EERIEIMPULSE" }, { id: "ENCORE" },
+                { id: "ENDURE" }, { id: "FACADE" }, { id: "FLASH" }, { id: "FRUSTRATION" }, { id: "GUARDSWAP" },
+                { id: "HAIL" }, { id: "HEADBUTT" }, { id: "HIDDENPOWER" }, { id: "HYDROPUMP" }, { id: "ICEBEAM" },
+                { id: "ICEPUNCH" }, { id: "ICYWIND" }, { id: "INFESTATION" }, { id: "IRONTAIL" }, { id: "MIMIC" },
+                { id: "MUDDYWATER" }, { id: "MUDSHOT" }, { id: "MUDSLAP" }, { id: "NATURALGIFT" }, { id: "PROTECT" },
+                { id: "RAINDANCE" }, { id: "REST" }, { id: "RETURN" }, { id: "ROCKSMASH" }, { id: "ROLLOUT" },
+                { id: "ROUND" }, { id: "SAFEGUARD" }, { id: "SANDSTORM" }, { id: "SCALD" }, { id: "SECRETPOWER" },
+                { id: "SLEEPTALK" }, { id: "SLUDGEBOMB" }, { id: "SLUDGEWAVE" }, { id: "SNORE" }, { id: "STOMPINGTANTRUM" },
+                { id: "SUBSTITUTE" }, { id: "SURF" }, { id: "SWAGGER" }, { id: "TOXIC" }, { id: "WATERFALL" },
+                { id: "WATERPULSE" }, { id: "WHIRLPOOL" }, { id: "TAKEDOWN" }, { id: "ACIDSPRAY" }, { id: "TRAILBLAZE" },
+                { id: "CHILLINGWATER" }, { id: "ROCKTOMB" }, { id: "AVALANCHE" }, { id: "SNOWSCAPE" }, { id: "ROCKSLIDE" },
+                { id: "SPIKES" }, { id: "LIQUIDATION" }, { id: "STEALTHROCK" }, { id: "HELPINGHAND" }, { id: "STONEEDGE" },
+                { id: "HAZE" }, { id: "CURSE" }
+            ],
+            egg: [
+                { id: "ACIDSPRAY" }, { id: "AFTERYOU" }, { id: "ANCIENTPOWER" }, { id: "BODYSLAM" }, { id: "COUNTER" },
+                { id: "CURSE" }, { id: "DOUBLEKICK" }, { id: "EERIEIMPULSE" }, { id: "ENCORE" }, { id: "GUARDSWAP" },
+                { id: "POWERUPPUNCH" }, { id: "RECOVER" }, { id: "SPITUP" }, { id: "STOCKPILE" }, { id: "SWALLOW" }
+            ]
+        }
+    },
+    {
+        id: "29",
+        num: 29,
+        name: "Quagsire",
+        types: ["Agua", "Tierra"],
+        category: "Pez Agua",
+        flavor: "Quagsire caza dejando las fauces abiertas en el agua y esperando a que su presa entre sin darse cuenta. Como se queda quieto, no pasa mucha hambre.",
+        credits: { design: "GameFreak", sprite: "GameFreak" },
+        stats: { hp: 95, atk: 85, def: 85, spa: 65, spd: 65, spe: 35 },
+        abilities: [
+            { type: "Habilidad 1", id: "DAMP" },
+            { type: "Habilidad 2", id: "WATERABSORB" },
+            { type: "Oculta", id: "UNAWARE" }
+        ],
+        evolution: {
+            prevo: { id: "28", method: "Nivel 20" },
+            evos: []
+        },
+        moves: {
+            level: [
+                { lv: 1, id: "WATERGUN" }, { lv: 1, id: "TAILWHIP" }, { lv: 1, id: "RAINDANCE" },
+                { lv: 1, id: "MUDSHOT" }, { lv: 12, id: "MIST" }, { lv: 12, id: "HAZE" },
+                { lv: 16, id: "SLAM" }, { lv: 23, id: "YAWN" }, { lv: 28, id: "AQUATAIL" },
+                { lv: 34, id: "MUDDYWATER" }, { lv: 40, id: "AMNESIA" }, { lv: 46, id: "TOXIC" },
+                { lv: 52, id: "EARTHQUAKE" }
+            ],
+            tutor: [
+                { id: "AFTERYOU" }, { id: "AMNESIA" }, { id: "ANCIENTPOWER" }, { id: "AQUATAIL" }, { id: "ATTRACT" },
+                { id: "BLIZZARD" }, { id: "BODYSLAM" }, { id: "BRICKBREAK" }, { id: "BULLDOZE" }, { id: "CAPTIVATE" },
+                { id: "CONFIDE" }, { id: "COUNTER" }, { id: "DEFENSECURL" }, { id: "DIG" }, { id: "DIVE" },
+                { id: "DOUBLEEDGE" }, { id: "DOUBLETEAM" }, { id: "DYNAMICPUNCH" }, { id: "EARTHPOWER" }, { id: "EARTHQUAKE" },
+                { id: "EERIEIMPULSE" }, { id: "ENCORE" }, { id: "ENDURE" }, { id: "FACADE" }, { id: "FLASH" },
+                { id: "FLING" }, { id: "FOCUSBLAST" }, { id: "FOCUSPUNCH" }, { id: "FRUSTRATION" }, { id: "GIGAIMPACT" },
+                { id: "GUARDSWAP" }, { id: "HAIL" }, { id: "HEADBUTT" }, { id: "HIDDENPOWER" }, { id: "HIGHHORSEPOWER" },
+                { id: "HYDROPUMP" }, { id: "HYPERBEAM" }, { id: "ICEBEAM" }, { id: "ICEPUNCH" }, { id: "ICYWIND" },
+                { id: "INFESTATION" }, { id: "IRONTAIL" }, { id: "LIQUIDATION" }, { id: "MEGAKICK" }, { id: "MEGAPUNCH" },
+                { id: "MIMIC" }, { id: "MUDDYWATER" }, { id: "MUDSHOT" }, { id: "MUDSLAP" }, { id: "NATURALGIFT" },
+                { id: "POWERUPPUNCH" }, { id: "PROTECT" }, { id: "RAINDANCE" }, { id: "REST" }, { id: "RETURN" },
+                { id: "ROCKSLIDE" }, { id: "ROCKSMASH" }, { id: "ROCKTOMB" }, { id: "ROLLOUT" }, { id: "ROUND" },
+                { id: "SAFEGUARD" }, { id: "SANDSTORM" }, { id: "SCALD" }, { id: "SECRETPOWER" }, { id: "SEISMICTOSS" },
+                { id: "SLEEPTALK" }, { id: "SLUDGEBOMB" }, { id: "SLUDGEWAVE" }, { id: "SNORE" }, { id: "STOMPINGTANTRUM" },
+                { id: "STONEEDGE" }, { id: "STRENGTH" }, { id: "SUBSTITUTE" }, { id: "SURF" }, { id: "SWAGGER" },
+                { id: "THIEF" }, { id: "TOXIC" }, { id: "WATERFALL" }, { id: "WATERPULSE" }, { id: "WHIRLPOOL" },
+                { id: "TAKEDOWN" }, { id: "ACIDSPRAY" }, { id: "TRAILBLAZE" }, { id: "CHILLINGWATER" }, { id: "AVALANCHE" },
+                { id: "SNOWSCAPE" }, { id: "DRAINPUNCH" }, { id: "BODYPRESS" }, { id: "SPIKES" }, { id: "TOXICSPIKES" },
+                { id: "STEALTHROCK" }, { id: "HELPINGHAND" }, { id: "HAZE" }, { id: "CURSE" }
+            ],
+            egg: []
+        }
+    },
+    {
+        id: "28-paldea",
+        num: 28,
+        name: "Wooper",
+        types: ["Veneno", "Tierra"],
+        category: "Pez Veneno",
+        flavor: "Ante el riesgo que le supone desplazarse solo, forma filas de tres o cuatro individuos que cuidan unos de otros mientras recorren los pantanos.",
+        stats: { hp: 55, atk: 45, def: 45, spa: 25, spd: 25, spe: 15 },
+        abilities: [
+            { type: "Habilidad 1", id: "POISONPOINT" },
+            { type: "Habilidad 2", id: "WATERABSORB" },
+            { type: "Oculta", id: "UNAWARE" }
+        ],
+        evolution: {
+            prevo: null,
+            evos: [{ id: "30", method: "Nivel 20" }]
+        },
+        credits: { design: "GameFreak", sprite: "GameFreak" },
+        moves: {
+            level: [
+                { lv: 1, id: "MUDSHOT" }, { lv: 1, id: "TAILWHIP" }, { lv: 4, id: "TACKLE" },
+                { lv: 8, id: "POISONTAIL" }, { lv: 12, id: "TOXICSPIKES" }, { lv: 16, id: "SLAM" },
+                { lv: 21, id: "YAWN" }, { lv: 24, id: "POISONJAB" }, { lv: 28, id: "SLUDGEWAVE" },
+                { lv: 32, id: "AMNESIA" }, { lv: 36, id: "TOXIC" }, { lv: 40, id: "EARTHQUAKE" }
+            ],
+            tutor: [
+                { id: "ACIDSPRAY" }, { id: "AMNESIA" }, { id: "BODYPRESS" }, { id: "BODYSLAM" }, { id: "BULLDOZE" },
+                { id: "CHILLINGWATER" }, { id: "CURSE" }, { id: "DIG" }, { id: "DOUBLEEDGE" }, { id: "EARTHPOWER" },
+                { id: "EARTHQUAKE" }, { id: "ENDURE" }, { id: "FACADE" }, { id: "GUNKSHOT" }, { id: "HAZE" },
+                { id: "HELPINGHAND" }, { id: "HYDROPUMP" }, { id: "LIQUIDATION" }, { id: "LOWKICK" }, { id: "MUDSHOT" },
+                { id: "MUDSLAP" }, { id: "POISONJAB" }, { id: "POISONTAIL" }, { id: "PROTECT" }, { id: "RAINDANCE" },
+                { id: "REST" }, { id: "ROCKSLIDE" }, { id: "ROCKTOMB" }, { id: "SANDSTORM" }, { id: "SLEEPTALK" },
+                { id: "SLUDGEBOMB" }, { id: "SLUDGEWAVE" }, { id: "SPIKES" }, { id: "STEALTHROCK" }, { id: "STOMPINGTANTRUM" },
+                { id: "STONEEDGE" }, { id: "SUBSTITUTE" }, { id: "SURF" }, { id: "TAKEDOWN" }, { id: "TOXIC" },
+                { id: "TOXICSPIKES" }, { id: "TRAILBLAZE" }, { id: "VENOSHOCK" }, { id: "WATERFALL" }, { id: "WATERPULSE" }
+            ],
+            egg: [
+                { id: "ACIDSPRAY" }, { id: "AFTERYOU" }, { id: "ANCIENTPOWER" }, { id: "COUNTER" }, { id: "CURSE" },
+                { id: "DOUBLEKICK" }, { id: "HAZE" }, { id: "MIST" }, { id: "RECOVER" }, { id: "SPITUP" },
+                { id: "STOCKPILE" }, { id: "SWALLOW" }
+            ]
+        }
+    },
+    {
+        id: "30",
+        num: 30,
+        name: "Clodsire",
+        types: ["Veneno", "Tierra"],
+        category: "Pez Púas",
+        flavor: "Cuando se siente amenazado, repele al enemigo con sus gruesas púas retráctiles. Esta técnica tan peligrosa es un arma de doble filo.",
+        stats: { hp: 130, atk: 75, def: 60, spa: 45, spd: 100, spe: 20 },
+        abilities: [
+            { type: "Habilidad 1", id: "POISONPOINT" },
+            { type: "Habilidad 2", id: "WATERABSORB" },
+            { type: "Oculta", id: "UNAWARE" }
+        ],
+        evolution: {
+            prevo: { id: "28-paldea", method: "Nivel 20" },
+            evos: []
+        },
+        credits: { design: "GameFreak", sprite: "GameFreak" },
+        moves: {
+            level: [
+                { lv: -1, id: "AMNESIA" }, { lv: 1, id: "POISONSTING" }, { lv: 1, id: "TAILWHIP" },
+                { lv: 4, id: "TOXICSPIKES" }, { lv: 8, id: "MUDSHOT" }, { lv: 12, id: "POISONTAIL" },
+                { lv: 16, id: "SLAM" }, { lv: 21, id: "YAWN" }, { lv: 24, id: "POISONJAB" },
+                { lv: 30, id: "SLUDGEWAVE" }, { lv: 36, id: "MEGAHORN" }, { lv: 40, id: "TOXIC" },
+                { lv: 48, id: "EARTHQUAKE" }
+            ],
+            tutor: [
+                { id: "ACIDSPRAY" }, { id: "AMNESIA" }, { id: "BODYPRESS" }, { id: "BODYSLAM" }, { id: "BULLDOZE" },
+                { id: "CHILLINGWATER" }, { id: "CURSE" }, { id: "DIG" }, { id: "DOUBLEEDGE" }, { id: "EARTHPOWER" },
+                { id: "EARTHQUAKE" }, { id: "ENDURE" }, { id: "FACADE" }, { id: "GIGAIMPACT" }, { id: "GUNKSHOT" },
+                { id: "HAZE" }, { id: "HEAVYSLAM" }, { id: "HELPINGHAND" }, { id: "HIGHHORSEPOWER" }, { id: "HYDROPUMP" },
+                { id: "HYPERBEAM" }, { id: "IRONHEAD" }, { id: "LIQUIDATION" }, { id: "LOWKICK" }, { id: "MUDDYWATER" },
+                { id: "MUDSHOT" }, { id: "MUDSLAP" }, { id: "POISONJAB" }, { id: "POISONTAIL" }, { id: "PROTECT" },
+                { id: "RAINDANCE" }, { id: "REST" }, { id: "ROCKSLIDE" }, { id: "ROCKTOMB" }, { id: "SANDSTORM" },
+                { id: "SLEEPTALK" }, { id: "SLUDGEBOMB" }, { id: "SLUDGEWAVE" }, { id: "SPIKES" }, { id: "STEALTHROCK" },
+                { id: "STOMPINGTANTRUM" }, { id: "STONEEDGE" }, { id: "SUBSTITUTE" }, { id: "SURF" }, { id: "TAKEDOWN" },
+                { id: "TOXIC" }, { id: "TOXICSPIKES" }, { id: "TRAILBLAZE" }, { id: "VENOSHOCK" }, { id: "WATERFALL" },
+                { id: "WATERPULSE" }, { id: "ZENHEADBUTT" }
+            ],
+            egg: []
+        }
+    },
 ];
 

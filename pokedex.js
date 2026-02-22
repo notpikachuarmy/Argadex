@@ -199,8 +199,8 @@ const misPokes = [
         id: "1-comida",
         num: 1,
         name: "Pitalant",
-        category: "Fruto Trompa (Comida)",
-        types: ["Planta", "Comida"],
+        category: "Fruto Trompa",
+        types: ["Planta", "Gourmet"],
         stats: { hp: 70, att: 65, def: 60, spA: 25, spD: 45, spe: 50 },
         abilities: [
             { type: "Habilidad 1", id: "OVERGROW" },
@@ -253,8 +253,8 @@ const misPokes = [
         id: "2-comida",
         num: 2,
         name: "Pitaderm",
-        category: "Fruto Elefante (Comida)",
-        types: ["Comida", "Dragón"],
+        category: "Fruto Elefante",
+        types: ["Gourmet", "Dragón"],
         stats: { hp: 85, att: 85, def: 75, spA: 40, spD: 65, spe: 65 },
         abilities: [
             { type: "Habilidad 1", id: "OVERGROW" },
@@ -308,8 +308,8 @@ const misPokes = [
         id: "3-comida",
         num: 3,
         name: "Pitaraka",
-        category: "Fruto Elefante (Comida)",
-        types: ["Comida", "Dragón"],
+        category: "Fruto Elefante",
+        types: ["Gourmet", "Dragón"],
         stats: { hp: 105, att: 115, def: 95, spA: 55, spD: 85, spe: 75 },
         abilities: [
             { type: "Habilidad 1", id: "OVERGROW" },

@@ -489,5 +489,507 @@ const misPokes = [
             egg: []
         }
     },
+    {
+        id: "7",
+        num: 7,
+        name: "Gasger",
+        category: "Gas",
+        types: ["Fuego"],
+        stats: { hp: 45, att: 60, def: 45, spA: 63, spD: 50, spe: 47 },
+        abilities: [
+            { type: "Habilidad 1", id: "BLAZE" },
+            { type: "Habilidad 2", id: "CORROSION" },
+            { type: "Oculta", id: "TOXICDEBRIS" }
+        ],
+        flavor: "Almacena gases inflamables en su estómago. Cuando se siente amenazado, libera una pequeña nube de humo por su lomo para ocultarse y huir.",
+        credits: { design: "Rezatri", sprite: "Rezatri" },
+        evolution: {
+            prevo: null,
+            evos: [{ id: "8", name: "Vaporaxt", method: "Lv. 16" }]
+        },
+        moves: {
+            level: [
+                { lv: "1", id: "SCRATCH" },
+                { lv: "1", id: "LEER" },
+                { lv: "6", id: "EMBER" },
+                { lv: "9", id: "SMOG" },
+                { lv: "12", id: "FURYSWIPES" },
+                { lv: "15", id: "CLEARSMOG" },
+                { lv: "18", id: "FLAMEWHEEL" }
+            ],
+            tutor: [
+                { id: "ATTRACT" }, { id: "CONFIDE" }, { id: "DOUBLETEAM" }, { id: "ENDURE" }, 
+                { id: "FACADE" }, { id: "FIREPUNCH" }, { id: "FLAMETHROWER" }, { id: "FLAMECHARGE" }, 
+                { id: "FLAREBLITZ" }, { id: "HEATWAVE" }, { id: "HELPINGHAND" }, { id: "OVERHEAT" }, 
+                { id: "PROTECT" }, { id: "REST" }, { id: "ROUND" }, { id: "SLEEPTALK" }, 
+                { id: "SNORE" }, { id: "SUBSTITUTE" }, { id: "SUNNYDAY" }, { id: "SWAGGER" }, 
+                { id: "WILLOWISP" }, { id: "TOXIC" }, { id: "SLUDGEBOMB" }, { id: "VENOSHOCK" }
+            ],
+            egg: []
+        }
+    },
+    {
+        id: "8",
+        num: 8,
+        name: "Vaporaxt",
+        category: "Mezcla",
+        types: ["Fuego", "Veneno"],
+        stats: { hp: 60, att: 80, def: 60, spA: 82, spD: 65, spe: 58 },
+        abilities: [
+            { type: "Habilidad 1", id: "BLAZE" },
+            { type: "Habilidad 2", id: "CORROSION" },
+            { type: "Oculta", id: "TOXICDEBRIS" }
+        ],
+        flavor: "Sus pulmones pueden filtrar cualquier sustancia. Experimenta mezclando gases en su interior para crear llamaradas de colores verdosos extremadamente tóxicas.",
+        credits: { design: "Rezatri", sprite: "Rezatri" },
+        evolution: {
+            prevo: { id: "7", name: "Gasger", method: "Lv. 16" },
+            evos: [{ id: "9", name: "Hazmadger", method: "Lv. 36" }]
+        },
+        moves: {
+            level: [
+                { lv: "1", id: "SCRATCH" },
+                { lv: "1", id: "LEER" },
+                { lv: "1", id: "EMBER" },
+                { lv: "1", id: "SMOG" },
+                { lv: "17", id: "ACIDSPRAY" },
+                { lv: "22", id: "FIRESPIN" },
+                { lv: "28", id: "SLASH" },
+                { lv: "32", id: "POISONJAB" },
+                { lv: "38", id: "LAVAPLUME" }
+            ],
+            tutor: [
+                { id: "ATTRACT" }, { id: "CONFIDE" }, { id: "DOUBLETEAM" }, { id: "ENDURE" }, 
+                { id: "FACADE" }, { id: "FIREPUNCH" }, { id: "FLAMETHROWER" }, { id: "FLAMECHARGE" }, 
+                { id: "FLAREBLITZ" }, { id: "HEATWAVE" }, { id: "HELPINGHAND" }, { id: "OVERHEAT" }, 
+                { id: "PROTECT" }, { id: "REST" }, { id: "ROUND" }, { id: "SLEEPTALK" }, 
+                { id: "SNORE" }, { id: "SUBSTITUTE" }, { id: "SUNNYDAY" }, { id: "SWAGGER" }, 
+                { id: "WILLOWISP" }, { id: "TOXIC" }, { id: "SLUDGEBOMB" }, { id: "VENOSHOCK" },
+                { id: "SLUDGEWAVE" }, { id: "ACIDARMOR" }
+            ],
+            egg: []
+        }
+    },
+    {
+        id: "9",
+        num: 9,
+        name: "Hazmadger",
+        category: "Químico",
+        types: ["Fuego", "Veneno"],
+        stats: { hp: 80, att: 105, def: 75, spA: 110, spD: 85, spe: 75 },
+        abilities: [
+            { type: "Habilidad 1", id: "BLAZE" },
+            { type: "Habilidad 2", id: "CORROSION" },
+            { type: "Oculta", id: "TOXICDEBRIS" }
+        ],
+        flavor: "Posee un sistema digestivo capaz de procesar cualquier veneno para convertirlo en combustible. El aire a su alrededor siempre huele a azufre y químicos quemados.",
+        credits: { design: "Rezatri", sprite: "Rezatri" },
+        evolution: {
+            prevo: { id: "8", name: "Vaporaxt", method: "Lv. 36" },
+            evos: []
+        },
+        moves: {
+            level: [
+                { lv: "1", id: "BELCH" },
+                { lv: "1", id: "FLAREBLITZ" },
+                { lv: "1", id: "GUNKSHOT" },
+                { lv: "1", id: "TOXICSPIKES" },
+                { lv: "1", id: "SMOKESCREEN" },
+                { lv: "42", id: "SLUDGEBOMB" },
+                { lv: "48", id: "OVERHEAT" },
+                { lv: "55", id: "VENOMDRENCH" },
+                { lv: "62", id: "BURNUP" }
+            ],
+            tutor: [
+                { id: "ATTRACT" }, { id: "CONFIDE" }, { id: "DOUBLETEAM" }, { id: "ENDURE" }, 
+                { id: "FACADE" }, { id: "FIREPUNCH" }, { id: "FLAMETHROWER" }, { id: "FLAMECHARGE" }, 
+                { id: "FLAREBLITZ" }, { id: "HEATWAVE" }, { id: "HELPINGHAND" }, { id: "OVERHEAT" }, 
+                { id: "PROTECT" }, { id: "REST" }, { id: "ROUND" }, { id: "SLEEPTALK" }, 
+                { id: "SNORE" }, { id: "SUBSTITUTE" }, { id: "SUNNYDAY" }, { id: "SWAGGER" }, 
+                { id: "WILLOWISP" }, { id: "TOXIC" }, { id: "SLUDGEBOMB" }, { id: "VENOSHOCK" },
+                { id: "SLUDGEWAVE" }, { id: "ACIDARMOR" }, { id: "GIGAIMPACT" }, { id: "HYPERBEAM" },
+                { id: "GUNKSHOT" }, { id: "BLASTBURN" }, { id: "FIREPLEDGE" }, { id: "POISONJAB" }
+            ],
+            egg: []
+        }
+    },
+    {
+        id: "10",
+        num: 10,
+        name: "Lapras",
+        category: "Transporte",
+        types: ["Agua", "Hielo"],
+        stats: { hp: 130, att: 85, def: 80, spA: 60, spD: 85, spe: 95 },
+        abilities: [
+            { type: "Habilidad 1", id: "WATERABSORB" },
+            { type: "Habilidad 2", id: "SHELLARMOR" },
+            { type: "Oculta", id: "HYDRATION" }
+        ],
+        flavor: "Está en peligro de extinción. Dicen que, al anochecer, se pone a cantar quejicoso mientras busca a los miembros de su especie que puedan quedar.",
+        credits: { design: "GameFreak", sprite: "GameFreak" },
+        evolution: {
+            prevo: null,
+            evos: []
+        },
+        moves: {
+            level: [
+                { lv: "1", id: "GROWL" }, { lv: "1", id: "WATERGUN" },
+                { lv: "5", id: "SING" }, { lv: "10", id: "MIST" },
+                { lv: "15", id: "LIFEDEW" }, { lv: "20", id: "ICESHARD" },
+                { lv: "25", id: "CONFUSERAY" }, { lv: "30", id: "WATERPULSE" },
+                { lv: "35", id: "BRINE" }, { lv: "40", id: "BODYSLAM" },
+                { lv: "45", id: "ICEBEAM" }, { lv: "50", id: "RAINDANCE" },
+                { lv: "55", id: "HYDROPUMP" }, { lv: "60", id: "PERISHSONG" },
+                { lv: "65", id: "SHEERCOLD" }
+            ],
+            tutor: [
+                { id: "ANCIENTPOWER" }, { id: "AQUATAIL" }, { id: "ATTRACT" }, { id: "AVALANCHE" },
+                { id: "BLIZZARD" }, { id: "BLOCK" }, { id: "BODYPRESS" }, { id: "BODYSLAM" },
+                { id: "BRINE" }, { id: "BULLDOZE" }, { id: "CAPTIVATE" }, { id: "CHARM" },
+                { id: "CONFIDE" }, { id: "DIVE" }, { id: "DOUBLEEDGE" }, { id: "DOUBLETEAM" },
+                { id: "DRAGONDANCE" }, { id: "DRAGONPULSE" }, { id: "DREAMEATER" }, { id: "DRILLRUN" },
+                { id: "ECHOEDVOICE" }, { id: "ENDURE" }, { id: "FACADE" }, { id: "FROSTBREATH" },
+                { id: "GIGAIMPACT" }, { id: "HAIL" }, { id: "HEADBUTT" }, { id: "HEALBELL" },
+                { id: "HELPINGHAND" }, { id: "HYDROPUMP" }, { id: "HYPERBEAM" }, { id: "HYPERVOICE" },
+                { id: "ICEBEAM" }, { id: "ICYWIND" }, { id: "IRONHEAD" }, { id: "IRONTAIL" },
+                { id: "LIQUIDATION" }, { id: "MEGAHORN" }, { id: "OUTRAGE" }, { id: "PROTECT" },
+                { id: "PSYCHIC" }, { id: "RAINDANCE" }, { id: "REST" }, { id: "ROAR" },
+                { id: "ROCKSMASH" }, { id: "ROUND" }, { id: "SAFEGUARD" }, { id: "SHOCKWAVE" },
+                { id: "SIGNALBEAM" }, { id: "SLEEPTALK" }, { id: "SMARTSTRIKE" }, { id: "SNORE" },
+                { id: "STRENGTH" }, { id: "SUBSTITUTE" }, { id: "SURF" }, { id: "SWAGGER" },
+                { id: "THUNDER" }, { id: "THUNDERBOLT" }, { id: "WATERFALL" }, { id: "WATERPULSE" },
+                { id: "WEATHERBALL" }, { id: "WHIRLPOOL" }, { id: "ZENHEADBUTT" }, { id: "TAKEDOWN" },
+                { id: "CHILLINGWATER" }, { id: "SNOWSCAPE" }, { id: "REFLECT" }, { id: "EARTHQUAKE" },
+                { id: "HAZE" }, { id: "ICICLESPEAR" }, { id: "MUDDYWATER" }, { id: "CURSE" },
+                { id: "DRAGONCHEER" }, { id: "ALLURINGVOICE" }, { id: "PSYCHICNOISE" }, { id: "ELECTROSHOT" }
+            ],
+            egg: [
+                { id: "ANCIENTPOWER" }, { id: "CURSE" }, { id: "DRAGONDANCE" }, { id: "FISSURE" },
+                { id: "FREEZEDRY" }, { id: "FUTURESIGHT" }, { id: "HORNDRILL" }, { id: "SPARKLINGARIA" },
+                { id: "TICKLE" }, { id: "WHIRLPOOL" }
+            ]
+        }
+    },
+    {
+        id: "10-comida",
+        num: 10,
+        name: "Lapras",
+        category: "Dulce Surcador",
+        types: ["Gourmet", "Hada"],
+        stats: { hp: 130, att: 75, def: 80, spA: 70, spD: 95, spe: 85 },
+        abilities: [
+            { type: "Habilidad 1", id: "WATERVEIL" },
+            { type: "Habilidad 2", id: "CUTECHARM" },
+            { type: "Oculta", id: "HYDRATION" }
+        ],
+        flavor: "Se dice que su caparazón está hecho de un merengue tan resistente como la piedra. Atrae a los marineros con un aroma a vainilla antes de ayudarlos a cruzar mares de almíbar.",
+        credits: { design: "Rezatri", sprite: "Rezatri" },
+        evolution: {
+            prevo: null,
+            evos: []
+        },
+        moves: {
+            level: [
+                { lv: "1", id: "POUND" }, { lv: "1", id: "GROWL" }, { lv: "1", id: "WATERGUN" },
+                { lv: "4", id: "SING" }, { lv: "7", id: "MIST" }, { lv: "10", id: "LIFEDEW" },
+                { lv: "14", id: "DISARMINGVOICE" }, { lv: "18", id: "CONFUSERAY" },
+                { lv: "22", id: "HEALPULSE" }, { lv: "27", id: "DRAININGKISS" },
+                { lv: "32", id: "BODYSLAM" }, { lv: "37", id: "MOONBLAST" },
+                { lv: "43", id: "PERISHSONG" }, { lv: "47", id: "DAZZLINGGLEAM" }
+            ],
+            tutor: [
+                { id: "ALLYSWITCH" }, { id: "ATTRACT" }, { id: "CALMMIND" }, { id: "CHARM" },
+                { id: "CONFIDE" }, { id: "DAZZLINGGLEAM" }, { id: "DOUBLETEAM" }, { id: "DRAININGKISS" },
+                { id: "DRAGONPULSE" }, { id: "ECHOEDVOICE" }, { id: "ENCORE" }, { id: "ENDURE" },
+                { id: "FACADE" }, { id: "FALSESWIPE" }, { id: "FLASH" }, { id: "GIGAIMPACT" },
+                { id: "HEALBELL" }, { id: "HELPINGHAND" }, { id: "HYPERBEAM" }, { id: "HYPERVOICE" },
+                { id: "ICEBEAM" }, { id: "ICYWIND" }, { id: "IRONDEFENSE" }, { id: "LIGHTSCREEN" },
+                { id: "MAGICCOAT" }, { id: "MAGICALLEAF" }, { id: "MISTYTERRAIN" }, { id: "OUTRAGE" },
+                { id: "PLAYROUGH" }, { id: "PROTECT" }, { id: "PSYCHIC" }, { id: "PSYCHICNOISE" },
+                { id: "RAINDANCE" }, { id: "REFLECT" }, { id: "REST" }, { id: "SAFEGUARD" },
+                { id: "SLEEPTALK" }, { id: "SMARTSTRIKE" }, { id: "STOMPINGTANTRUM" }, { id: "SUBSTITUTE" },
+                { id: "SURF" }, { id: "SWAGGER" }, { id: "THUNDERBOLT" }, { id: "WATERPULSE" },
+                { id: "ZENHEADBUTT" }
+            ],
+            egg: []
+        }
+    },
+    {
+        id: "11",
+        num: 11,
+        name: "Pichu",
+        category: "Ratoncito",
+        types: ["Eléctrico"],
+        stats: { hp: 20, att: 40, def: 15, spA: 60, spD: 35, spe: 35 },
+        abilities: [
+            { type: "Habilidad 1", id: "STATIC" },
+            { type: "Oculta", id: "LIGHTNINGROD" }
+        ],
+        flavor: "Sigue sin poder contener o retener electricidad. Cuando se asusta, descarga energía de forma accidental. Con todo, a medida que pasa el tiempo va mejorando.",
+        credits: { design: "GameFreak", sprite: "GameFreak" },
+        evolution: {
+            prevo: null,
+            evos: [{ id: "12", name: "Pikachu", method: "Felicidad" }]
+        },
+        moves: {
+            level: [
+                { lv: "1", id: "THUNDERSHOCK" }, { lv: "1", id: "TAILWHIP" }, { lv: "4", id: "PLAYNICE" },
+                { lv: "8", id: "SWEETKISS" }, { lv: "12", id: "NUZZLE" }, { lv: "16", id: "NASTYPLOT" },
+                { lv: "20", id: "CHARM" }
+            ],
+            tutor: [
+                { id: "ATTRACT" }, { id: "BODYSLAM" }, { id: "CAPTIVATE" }, { id: "CHARGEBEAM" },
+                { id: "CHARM" }, { id: "CONFIDE" }, { id: "COUNTER" }, { id: "COVET" },
+                { id: "DEFENSECURL" }, { id: "DOUBLEEDGE" }, { id: "DOUBLETEAM" }, { id: "ECHOEDVOICE" },
+                { id: "ELECTRICTERRAIN" }, { id: "ELECTROWEB" }, { id: "ENCORE" }, { id: "ENDURE" },
+                { id: "FACADE" }, { id: "FLASH" }, { id: "FLING" }, { id: "FRUSTRATION" },
+                { id: "GRASSKNOT" }, { id: "HEADBUTT" }, { id: "HELPINGHAND" }, { id: "HIDDENPOWER" },
+                { id: "IRONTAIL" }, { id: "LIGHTSCREEN" }, { id: "MAGNETRISE" }, { id: "MEGAKICK" },
+                { id: "MEGAPUNCH" }, { id: "MIMIC" }, { id: "MUDSLAP" }, { id: "NASTYPLOT" },
+                { id: "NATURALGIFT" }, { id: "PLAYROUGH" }, { id: "PROTECT" }, { id: "RAINDANCE" },
+                { id: "REFLECT" }, { id: "REST" }, { id: "RETURN" }, { id: "REVERSAL" },
+                { id: "ROLLOUT" }, { id: "ROUND" }, { id: "SECRETPOWER" }, { id: "SEISMICTOSS" },
+                { id: "SHOCKWAVE" }, { id: "SIGNALBEAM" }, { id: "SLEEPTALK" }, { id: "SNORE" },
+                { id: "SUBSTITUTE" }, { id: "SURF" }, { id: "SWAGGER" }, { id: "SWIFT" },
+                { id: "THUNDER" }, { id: "THUNDERBOLT" }, { id: "THUNDERPUNCH" }, { id: "THUNDERWAVE" },
+                { id: "UPROAR" }, { id: "VOLTSWITCH" }, { id: "WILDCHARGE" }, { id: "TAKEDOWN" },
+                { id: "DISARMINGVOICE" }, { id: "TRAILBLAZE" }, { id: "ELECTROBALL" }, { id: "CHARGE" }
+            ],
+            egg: [
+                { id: "CHARGE" }, { id: "DISARMINGVOICE" }, { id: "ELECTRICTERRAIN" }, { id: "ENCORE" },
+                { id: "FAKEOUT" }, { id: "FLAIL" }, { id: "PRESENT" }, { id: "REVERSAL" },
+                { id: "THUNDERPUNCH" }, { id: "TICKLE" }, { id: "WISH" }
+            ]
+        }
+    },
+    {
+        id: "11-jagara",
+        num: 11,
+        name: "Pichu",
+        category: "Ratoncito",
+        types: ["Planta"],
+        stats: { hp: 20, att: 40, def: 15, spA: 60, spD: 35, spe: 35 },
+        abilities: [
+            { type: "Habilidad 1", id: "LEAFGUARD" },
+            { type: "Habilidad 2", id: "NATURALCURE" },
+            { type: "Oculta", id: "GRASSYSURGE" }
+        ],
+        flavor: "Sigue sin poder contener o retener electricidad. Cuando se asusta, descarga energía de forma accidental. Con todo, a medida que pasa el tiempo va mejorando.",
+        credits: { design: "Rezatri", sprite: "Rezatri" },
+        evolution: {
+            prevo: null,
+            evos: [{ id: "12-jagara", name: "Pikachu", method: "Felicidad" }]
+        },
+        moves: {
+            level: [
+                { lv: "1", id: "TAILWHIP" }, { lv: "1", id: "GROWL" }, { lv: "4", id: "VINEWHIP" },
+                { lv: "8", id: "SWEETSCENT" }, { lv: "12", id: "RAZORLEAF" }, { lv: "16", id: "QUICKATTACK" },
+                { lv: "20", id: "CHARM" }, { lv: "24", id: "GIGADRAIN" }
+            ],
+            tutor: [
+                { id: "ATTRACT" }, { id: "CONFIDE" }, { id: "DOUBLETEAM" }, { id: "ECHOEDVOICE" },
+                { id: "ENDURE" }, { id: "FACADE" }, { id: "GIGADRAIN" }, { id: "GRASSKNOT" },
+                { id: "HELPINGHAND" }, { id: "HIDDENPOWER" }, { id: "LIGHTSCREEN" }, { id: "MAGICALLEAF" },
+                { id: "PROTECT" }, { id: "RAINDANCE" }, { id: "REST" }, { id: "RECYCLE" },
+                { id: "RETURN" }, { id: "ROUND" }, { id: "SAFEGUARD" }, { id: "SLEEPTALK" },
+                { id: "SNORE" }, { id: "SUBSTITUTE" }, { id: "SUNNYDAY" }, { id: "SWAGGER" },
+                { id: "SWIFT" }, { id: "UPROAR" }, { id: "WORKUP" }
+            ],
+            egg: []
+        }
+    },
+    {
+        id: "12",
+        num: 12,
+        name: "Pikachu",
+        category: "Ratón",
+        types: ["Eléctrico"],
+        stats: { hp: 35, att: 55, def: 40, spA: 90, spD: 50, spe: 50 },
+        abilities: [
+            { type: "Habilidad 1", id: "STATIC" },
+            { type: "Oculta", id: "LIGHTNINGROD" }
+        ],
+        flavor: "Tiene unas bolsas en las mejillas en las que almacena electricidad. Cuando la libera de golpe, la potencia de la descarga es igual a la de un rayo.",
+        credits: { design: "GameFreak", sprite: "GameFreak" },
+        evolution: {
+            prevo: { id: "11", name: "Pichu", method: "Felicidad" },
+            evos: [{ id: "13", name: "Raichu", method: "Objeto: Piedra trueno" }]
+        },
+        moves: {
+            level: [
+                { lv: "1", id: "PLAYNICE" }, { lv: "1", id: "SWEETKISS" }, { lv: "1", id: "NUZZLE" },
+                { lv: "1", id: "NASTYPLOT" }, { lv: "1", id: "CHARM" }, { lv: "1", id: "THUNDERSHOCK" },
+                { lv: "1", id: "TAILWHIP" }, { lv: "1", id: "GROWL" }, { lv: "1", id: "QUICKATTACK" },
+                { lv: "4", id: "THUNDERWAVE" }, { lv: "8", id: "DOUBLETEAM" }, { lv: "12", id: "ELECTROBALL" },
+                { lv: "16", id: "FEINT" }, { lv: "20", id: "SPARK" }, { lv: "24", id: "AGILITY" },
+                { lv: "28", id: "SLAM" }, { lv: "28", id: "IRONTAIL" }, { lv: "32", id: "DISCHARGE" },
+                { lv: "36", id: "THUNDERBOLT" }, { lv: "40", id: "LIGHTSCREEN" }, { lv: "44", id: "THUNDER" }
+            ],
+            tutor: [
+                { id: "AGILITY" }, { id: "ATTRACT" }, { id: "BODYSLAM" }, { id: "BRICKBREAK" },
+                { id: "CAPTIVATE" }, { id: "CHARGEBEAM" }, { id: "CHARM" }, { id: "CONFIDE" },
+                { id: "COUNTER" }, { id: "COVET" }, { id: "DEFENSECURL" }, { id: "DIG" },
+                { id: "DOUBLEEDGE" }, { id: "DOUBLETEAM" }, { id: "DRAININGKISS" }, { id: "DYNAMICPUNCH" },
+                { id: "ECHOEDVOICE" }, { id: "ELECTRICTERRAIN" }, { id: "ELECTROBALL" }, { id: "ELECTROWEB" },
+                { id: "ENCORE" }, { id: "ENDURE" }, { id: "FACADE" }, { id: "FLASH" },
+                { id: "FLING" }, { id: "FOCUSPUNCH" }, { id: "FRUSTRATION" }, { id: "GRASSKNOT" },
+                { id: "HEADBUTT" }, { id: "HELPINGHAND" }, { id: "HIDDENPOWER" }, { id: "IRONTAIL" },
+                { id: "KNOCKOFF" }, { id: "LASERFOCUS" }, { id: "LIGHTSCREEN" }, { id: "MAGNETRISE" },
+                { id: "MEGAKICK" }, { id: "MEGAPUNCH" }, { id: "MIMIC" }, { id: "MUDSLAP" },
+                { id: "NASTYPLOT" }, { id: "NATURALGIFT" }, { id: "PAYDAY" }, { id: "PLAYROUGH" },
+                { id: "PROTECT" }, { id: "RAINDANCE" }, { id: "REFLECT" }, { id: "REST" },
+                { id: "RETURN" }, { id: "REVERSAL" }, { id: "RISINGVOLTAGE" }, { id: "ROCKSMASH" },
+                { id: "ROLLOUT" }, { id: "ROUND" }, { id: "SECRETPOWER" }, { id: "SEISMICTOSS" },
+                { id: "SHOCKWAVE" }, { id: "SIGNALBEAM" }, { id: "SLEEPTALK" }, { id: "SNORE" },
+                { id: "STRENGTH" }, { id: "SUBSTITUTE" }, { id: "SURF" }, { id: "SWAGGER" },
+                { id: "SWIFT" }, { id: "THIEF" }, { id: "THUNDER" }, { id: "THUNDERBOLT" },
+                { id: "THUNDERPUNCH" }, { id: "THUNDERWAVE" }, { id: "UPROAR" }, { id: "VOLTSWITCH" },
+                { id: "VOLTTACKLE" }, { id: "WILDCHARGE" }, { id: "TAKEDOWN" }, { id: "FAKETEARS" },
+                { id: "DISARMINGVOICE" }, { id: "TRAILBLAZE" }, { id: "EERIEIMPULSE" }, { id: "CHARGE" },
+                { id: "ENDEAVOR" }, { id: "ALLURINGVOICE" }, { id: "UPPERHAND" }
+            ],
+            egg: []
+        }
+    },
+    {
+        id: "12-jagara",
+        num: 12,
+        name: "Pikachu",
+        category: "Ratón",
+        types: ["Planta"],
+        stats: { hp: 35, att: 55, def: 40, spA: 90, spD: 50, spe: 50 },
+        abilities: [
+            { type: "Habilidad 1", id: "LEAFGUARD" },
+            { type: "Habilidad 2", id: "NATURALCURE" },
+            { type: "Oculta", id: "GRASSYSURGE" }
+        ],
+        flavor: "Tiene unas bolsas en las mejillas en las que almacena electricidad. Cuando la libera de golpe, la potencia de la descarga es igual a la de un rayo.",
+        credits: { design: "Rezatri", sprite: "Rezatri" },
+        evolution: {
+            prevo: { id: "11-jagara", name: "Pichu", method: "Felicidad" },
+            evos: [{ id: "13-jagara", name: "Raichu", method: "Movimiento: Rayo Solar" }]
+        },
+        moves: {
+            level: [
+                { lv: "1", id: "TAILWHIP" }, { lv: "1", id: "GROWL" }, { lv: "1", id: "VINEWHIP" },
+                { lv: "4", id: "SWEETSCENT" }, { lv: "8", id: "RAZORLEAF" }, { lv: "12", id: "QUICKATTACK" },
+                { lv: "16", id: "DOUBLETEAM" }, { lv: "20", id: "GIGADRAIN" }, { lv: "24", id: "SYNTHESIS" },
+                { lv: "28", id: "SOLARBEAM" }, { lv: "32", id: "AGILITY" }, { lv: "36", id: "LEAFSTORM" },
+                { lv: "40", id: "SOLARBLADE" }
+            ],
+            tutor: [
+                { id: "ATTRACT" }, { id: "BODYSLAM" }, { id: "BRICKBREAK" }, { id: "CALMMIND" },
+                { id: "CAPTIVATE" }, { id: "CONFIDE" }, { id: "DIG" }, { id: "DOUBLETEAM" },
+                { id: "ECHOEDVOICE" }, { id: "ENDURE" }, { id: "ENERGYBALL" }, { id: "FACADE" },
+                { id: "FLING" }, { id: "FOCUSBLAST" }, { id: "GIGADRAIN" }, { id: "GRASSKNOT" },
+                { id: "GRASSYGLIDE" }, { id: "GRASSYTERRAIN" }, { id: "HELPINGHAND" }, { id: "HIDDENPOWER" },
+                { id: "IRONTAIL" }, { id: "KNOCKOFF" }, { id: "LEAFSTORM" }, { id: "LIGHTSCREEN" },
+                { id: "MAGICALLEAF" }, { id: "NATURALGIFT" }, { id: "PROTECT" }, { id: "RAINDANCE" },
+                { id: "REST" }, { id: "RECYCLE" }, { id: "RETURN" }, { id: "ROUND" },
+                { id: "SAFEGUARD" }, { id: "SEEDBOMB" }, { id: "SLEEPTALK" }, { id: "SNORE" },
+                { id: "SOLARBEAM" }, { id: "SOLARBLADE" }, { id: "SUBSTITUTE" }, { id: "SUNNYDAY" },
+                { id: "SWAGGER" }, { id: "SWIFT" }, { id: "SWORDSDANCE" }, { id: "UPROAR" }, { id: "WORKUP" }
+            ],
+            egg: []
+        }
+    },
+    {
+        id: "13",
+        num: 13,
+        name: "Raichu",
+        category: "Ratón",
+        types: ["Eléctrico"],
+        stats: { hp: 60, att: 90, def: 55, spA: 110, spD: 90, spe: 80 },
+        abilities: [
+            { type: "Habilidad 1", id: "STATIC" },
+            { type: "Oculta", id: "LIGHTNINGROD" }
+        ],
+        flavor: "Si acumula demasiada electricidad, se vuelve violento. Para evitarlo, suele descargar los excesos de energía, lo que lo mantiene calmado.",
+        credits: { design: "GameFreak", sprite: "GameFreak" },
+        evolution: {
+            prevo: { id: "12", name: "Pikachu", method: "Objeto: Piedra trueno" },
+            evos: []
+        },
+        moves: {
+            level: [
+                { lv: "-1", id: "THUNDERPUNCH" }, { lv: "1", id: "PLAYNICE" }, { lv: "1", id: "SWEETKISS" },
+                { lv: "1", id: "NUZZLE" }, { lv: "1", id: "NASTYPLOT" }, { lv: "1", id: "CHARM" },
+                { lv: "1", id: "THUNDERWAVE" }, { lv: "1", id: "DOUBLETEAM" }, { lv: "1", id: "ELECTROBALL" },
+                { lv: "1", id: "FEINT" }, { lv: "1", id: "SPARK" }, { lv: "1", id: "AGILITY" },
+                { lv: "1", id: "SLAM" }, { lv: "1", id: "DISCHARGE" }, { lv: "1", id: "LIGHTSCREEN" },
+                { lv: "1", id: "THUNDER" }, { lv: "1", id: "THUNDERSHOCK" }, { lv: "1", id: "TAILWHIP" },
+                { lv: "1", id: "GROWL" }, { lv: "1", id: "QUICKATTACK" }, { lv: "1", id: "IRONTAIL" },
+                { lv: "5", id: "THUNDERBOLT" }
+            ],
+            tutor: [
+                { id: "AGILITY" }, { id: "ATTRACT" }, { id: "BODYSLAM" }, { id: "BRICKBREAK" },
+                { id: "BRUTALSWING" }, { id: "CAPTIVATE" }, { id: "CHARGEBEAM" }, { id: "CHARM" },
+                { id: "CONFIDE" }, { id: "COUNTER" }, { id: "COVET" }, { id: "DEFENSECURL" },
+                { id: "DIG" }, { id: "DOUBLEEDGE" }, { id: "DOUBLETEAM" }, { id: "DRAININGKISS" },
+                { id: "DYNAMICPUNCH" }, { id: "ECHOEDVOICE" }, { id: "EERIEIMPULSE" }, { id: "ELECTRICTERRAIN" },
+                { id: "ELECTROBALL" }, { id: "ELECTROWEB" }, { id: "ENCORE" }, { id: "ENDURE" },
+                { id: "FACADE" }, { id: "FLASH" }, { id: "FLING" }, { id: "FOCUSBLAST" },
+                { id: "FOCUSPUNCH" }, { id: "FRUSTRATION" }, { id: "GIGAIMPACT" }, { id: "GRASSKNOT" },
+                { id: "HEADBUTT" }, { id: "HELPINGHAND" }, { id: "HIDDENPOWER" }, { id: "HYPERBEAM" },
+                { id: "IRONTAIL" }, { id: "KNOCKOFF" }, { id: "LASERFOCUS" }, { id: "LIGHTSCREEN" },
+                { id: "MAGNETRISE" }, { id: "MEGAKICK" }, { id: "MEGAPUNCH" }, { id: "MIMIC" },
+                { id: "MUDSLAP" }, { id: "NASTYPLOT" }, { id: "NATURALGIFT" }, { id: "PAYDAY" },
+                { id: "PLAYROUGH" }, { id: "PROTECT" }, { id: "RAINDANCE" }, { id: "REFLECT" },
+                { id: "REST" }, { id: "RETURN" }, { id: "REVERSAL" }, { id: "RISINGVOLTAGE" },
+                { id: "ROCKSMASH" }, { id: "ROLLOUT" }, { id: "ROUND" }, { id: "SAFEGUARD" },
+                { id: "SECRETPOWER" }, { id: "SEISMICTOSS" }, { id: "SHOCKWAVE" }, { id: "SIGNALBEAM" },
+                { id: "SLEEPTALK" }, { id: "SNORE" }, { id: "SPEEDSWAP" }, { id: "STRENGTH" },
+                { id: "SUBSTITUTE" }, { id: "SURF" }, { id: "SWAGGER" }, { id: "SWIFT" },
+                { id: "THIEF" }, { id: "THUNDER" }, { id: "THUNDERBOLT" }, { id: "THUNDERPUNCH" },
+                { id: "THUNDERWAVE" }, { id: "UPROAR" }, { id: "VOLTSWITCH" }, { id: "WILDCHARGE" },
+                { id: "TAKEDOWN" }, { id: "FAKETEARS" }, { id: "DISARMINGVOICE" }, { id: "TRAILBLAZE" },
+                { id: "CHARGE" }, { id: "ENDEAVOR" }, { id: "ALLURINGVOICE" }, { id: "UPPERHAND" }
+            ],
+            egg: []
+        }
+    },
+    {
+        id: "13-jagara",
+        num: 13,
+        name: "Raichu",
+        category: "Ratón",
+        types: ["Planta"],
+        stats: { hp: 60, att: 90, def: 55, spA: 110, spD: 90, spe: 80 },
+        abilities: [
+            { type: "Habilidad 1", id: "LEAFGUARD" },
+            { type: "Habilidad 2", id: "NATURALCURE" },
+            { type: "Oculta", id: "GRASSYSURGE" }
+        ],
+        flavor: "Si acumula demasiada electricidad, se vuelve violento. Para evitarlo, suele descargar los excesos de energía, lo que lo mantiene calmado.",
+        credits: { design: "Rezatri", sprite: "Rezatri" },
+        evolution: {
+            prevo: { id: "12-jagara", name: "Pikachu", method: "Movimiento: Rayo Solar" },
+            evos: []
+        },
+        moves: {
+            level: [
+                { lv: "1", id: "TAILWHIP" }, { lv: "1", id: "QUICKATTACK" }, { lv: "1", id: "GIGADRAIN" },
+                { lv: "1", id: "SOLARBEAM" }, { lv: "1", id: "LEAFBLADE" }, { lv: "1", id: "NASTYPLOT" },
+                { lv: "1", id: "ENCORE" }, { lv: "1", id: "PLAYROUGH" }, { lv: "40", id: "ENERGYBALL" },
+                { lv: "45", id: "WOODHAMMER" }, { lv: "50", id: "TERRAINPULSE" },
+                { lv: "55", id: "GRASSYTERRAIN" }, { lv: "60", id: "LEAFSTORM" }
+            ],
+            tutor: [
+                { id: "ATTRACT" }, { id: "BODYSLAM" }, { id: "BRICKBREAK" }, { id: "CALMMIND" },
+                { id: "CAPTIVATE" }, { id: "CONFIDE" }, { id: "DIG" }, { id: "DOUBLETEAM" },
+                { id: "ECHOEDVOICE" }, { id: "ENDURE" }, { id: "ENERGYBALL" }, { id: "FACADE" },
+                { id: "FLING" }, { id: "FOCUSBLAST" }, { id: "FOCUSPUNCH" }, { id: "GIGADRAIN" },
+                { id: "GRASSKNOT" }, { id: "GRASSYGLIDE" }, { id: "GRASSYTERRAIN" }, { id: "HELPINGHAND" },
+                { id: "HIDDENPOWER" }, { id: "HYPERBEAM" }, { id: "IRONTAIL" }, { id: "KNOCKOFF" },
+                { id: "LEAFSTORM" }, { id: "LIGHTSCREEN" }, { id: "MAGICALLEAF" }, { id: "NATURALGIFT" },
+                { id: "PROTECT" }, { id: "RAINDANCE" }, { id: "REST" }, { id: "RECYCLE" },
+                { id: "RETURN" }, { id: "ROUND" }, { id: "SAFEGUARD" }, { id: "SEEDBOMB" },
+                { id: "SLEEPTALK" }, { id: "SNORE" }, { id: "SOLARBEAM" }, { id: "SOLARBLADE" },
+                { id: "SUBSTITUTE" }, { id: "SUNNYDAY" }, { id: "SWAGGER" }, { id: "SWIFT" },
+                { id: "SWORDSDANCE" }, { id: "THIEF" }, { id: "UPROAR" }, { id: "WORKUP" }
+            ],
+            egg: []
+        }
+    },
 ];
 

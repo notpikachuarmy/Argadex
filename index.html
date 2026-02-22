@@ -66,7 +66,7 @@
                 <div class="card" onclick="renderDetail('${p.id}')" data-name="${p.name}">
                     <img src="sprites/${p.id}.png" onerror="this.src='sprites/1.png'">
                     <p>#${p.num} <strong>${p.name}</strong></p>
-                    <div class="types-row">${p.types.map(t => `<img src="tipos/${t}.png" class="type-icon">`).join('')}</div>
+                    <div class="types-row">${p.types.map(t => `<img src="tipos/${t.trim()}.png" class="type-icon">`).join('')}</div>
                 </div>
             `).join('')}</div>`;
         }
@@ -76,7 +76,23 @@
             const p = misPokes.find(poke => poke.id === id);
             const container = document.getElementById('app');
 
-            // Función para construir tablas de movimientos
+            // --- LÓGICA DE FORMAS ---
+            const formas = misPokes.filter(f => f.num === p.num);
+            let selectorFormas = "";
+            if (formas.length > 1) {
+                selectorFormas = `<div class="evo-container" style="background:rgba(0,0,0,0.05); padding:10px; border-radius:10px; margin-bottom:15px;">
+                    <p style="margin-bottom:10px; font-weight:bold;">Cambiar Forma:</p>
+                    <div style="display:flex; justify-content:center; gap:10px;">
+                        ${formas.map(f => `
+                            <div class="evo-unit ${f.id === p.id ? 'active-evo' : ''}" onclick="renderDetail('${f.id}')" style="cursor:pointer">
+                                <img src="sprites/${f.id}.png" style="width:50px">
+                                <br><small>${f.types.includes("Gourmet") ? "Gourmet" : "Base"}</small>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>`;
+            }
+
             const buildTable = (list, hideLv = false) => {
                 if(!list || list.length === 0) return "";
                 return `<table>
@@ -94,7 +110,7 @@
                                     <hr>${mData.desc || 'Sin descripción'}
                                 </div>
                             </td>
-                            <td><img src="tipos/${mData.tipo}.png" class="type-icon"></td>
+                            <td><img src="tipos/${mData.tipo ? mData.tipo.trim() : 'Normal'}.png" class="type-icon"></td>
                             <td><img src="categorias/${mData.cat || 'estado'}.png" class="cat-icon"></td>
                         </tr>`;
                     }).join('')}
@@ -120,11 +136,11 @@
                             <h2>#${p.num} ${p.name}</h2>
                             <p class="category-text">Pokémon ${p.category}</p>
                             <p class="flavor-text">"${p.flavor}"</p>
-                            <div class="types-row">${p.types.map(t => `<img src="tipos/${t}.png" class="type-icon">`).join('')}</div>
+                            <div class="types-row">${p.types.map(t => `<img src="tipos/${t.trim()}.png" class="type-icon">`).join('')}</div>
                         </div>
                     </div>
 
-                    <div class="secciones-grid">
+                    ${selectorFormas} <div class="secciones-grid">
                         <div class="seccion">
                             <h3>Estadísticas Base</h3>
                             ${Object.entries(p.stats).map(([k,v]) => `

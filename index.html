@@ -61,9 +61,7 @@
             document.getElementById('search-container').style.display = "block";
             const container = document.getElementById('app');
             
-            // FILTRO: Solo mostramos los que NO tengan un "-" en el ID (las formas base)
             const pokesPrincipales = misPokes.filter(p => !p.id.toString().includes('-'));
-            
             pokesPrincipales.sort((a,b) => a.num - b.num);
 
             container.innerHTML = `<div class="grid">${pokesPrincipales.map(p => `
@@ -195,6 +193,14 @@
                                 </div>`).join('')}
                         </div>
                     </div>
+
+                    ${p.credits ? `
+                        <div style="text-align: center; margin-top: 10px; font-size: 0.85em; color: #777; border-top: 1px solid #eee; padding-top: 10px;">
+                            ${p.credits.design ? `Diseño: <strong>${p.credits.design}</strong>` : ''}
+                            ${p.credits.design && p.credits.sprite ? ' | ' : ''}
+                            ${p.credits.sprite ? `Sprite: <strong>${p.credits.sprite}</strong>` : ''}
+                        </div>
+                    ` : ''}
 
                     <div class="seccion" style="margin-top: 20px;">
                         <h3>Movimientos por Nivel</h3>

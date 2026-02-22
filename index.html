@@ -28,13 +28,11 @@
                 const [resH, resM] = await Promise.all([fetch(urlHab), fetch(urlMov)]);
                 const [txtH, txtM] = await Promise.all([resH.text(), resM.text()]);
                 
-                // Procesar Habilidades
                 txtH.split('\n').slice(1).forEach(l => { 
                     const [id, nombre, desc] = l.replace(/\r/g,'').split(','); 
                     if(id) dbHab[id.trim().toUpperCase()] = { nombre: nombre?.trim(), desc: desc?.trim() }; 
                 });
 
-                // Procesar Movimientos
                 txtM.split('\n').slice(1).forEach(l => {
                     const [id, nombre, cat, tipo, pot, pre, pp, desc] = l.replace(/\r/g,'').split(',');
                     if(id) {
@@ -78,16 +76,17 @@
             const p = misPokes.find(poke => poke.id === id);
             const container = document.getElementById('app');
 
-            const buildTable = (list, isTutor = false) => {
-                if(!list || list.length === 0) return "<p>No hay movimientos registrados.</p>";
+            // Función para construir tablas de movimientos
+            const buildTable = (list, hideLv = false) => {
+                if(!list || list.length === 0) return "";
                 return `<table>
-                    <thead><tr>${isTutor ? '' : '<th>Lv</th>'}<th>Movimiento</th><th>Tipo</th><th>Cat</th></tr></thead>
+                    <thead><tr>${hideLv ? '' : '<th>Lv</th>'}<th>Movimiento</th><th>Tipo</th><th>Cat</th></tr></thead>
                     <tbody>
                     ${list.map(m => {
                         const mData = dbMov[m.id.toUpperCase()] || { nombre: m.id, tipo: "Normal", cat: "estado" };
                         const hasStab = p.types.includes(mData.tipo);
                         return `<tr class="${hasStab ? 'stab-row' : ''}">
-                            ${isTutor ? '' : `<td>${m.lv || '-'}</td>`}
+                            ${hideLv ? '' : `<td>${m.lv || '-'}</td>`}
                             <td class="tooltip">
                                 <strong>${mData.nombre}</strong> ${hasStab ? '★' : ''}
                                 <div class="tooltiptext">
@@ -95,8 +94,8 @@
                                     <hr>${mData.desc || 'Sin descripción'}
                                 </div>
                             </td>
-                            <td><img src="tipos/${mData.tipo}.png" class="type-icon" onerror="this.style.display='none'"></td>
-                            <td><img src="categorias/${mData.cat || 'estado'}.png" class="cat-icon" onerror="this.style.display='none'"></td>
+                            <td><img src="tipos/${mData.tipo}.png" class="type-icon"></td>
+                            <td><img src="categorias/${mData.cat || 'estado'}.png" class="cat-icon"></td>
                         </tr>`;
                     }).join('')}
                     </tbody>
@@ -104,7 +103,7 @@
             };
 
             const habHTML = p.abilities.map(a => {
-                const hData = dbHab[a.id.toUpperCase()] || { nombre: a.id, desc: "Falta en Excel" };
+                const hData = dbHab[a.id.toUpperCase()] || { nombre: a.id, desc: "Cargando descripción..." };
                 return `<div class="tooltip hab-box">
                     <strong>${a.type}:</strong> ${hData.nombre}
                     <div class="tooltiptext">${hData.desc}</div>
@@ -156,10 +155,19 @@
                         ${buildTable(p.moves.level)}
                     </div>
 
-                    <div class="seccion" style="margin-top: 20px;">
-                        <h3>Movimientos por Tutor / MT</h3>
-                        ${buildTable(p.moves.tutor, true)}
-                    </div>
+                    ${p.moves.tutor && p.moves.tutor.length > 0 ? `
+                        <div class="seccion" style="margin-top: 20px;">
+                            <h3>Movimientos por Tutor / MT</h3>
+                            ${buildTable(p.moves.tutor, true)}
+                        </div>
+                    ` : ''}
+
+                    ${p.moves.egg && p.moves.egg.length > 0 ? `
+                        <div class="seccion" style="margin-top: 20px;">
+                            <h3>Movimientos Huevo</h3>
+                            ${buildTable(p.moves.egg, true)}
+                        </div>
+                    ` : ''}
                 </div>`;
             window.scrollTo(0,0);
         }

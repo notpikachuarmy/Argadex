@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARGADEX</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 onclick="renderHome()" style="cursor:pointer">INICIO ARGADEX</h1>
+        <div id="search-container">
+            <input type="text" id="pokeSearch" onkeyup="searchPoke()" placeholder="🔍 Buscar Pokémon...">
+        </div>
+    </header>
+
+    <div id="app"></div>
+
+    <script src="pokedex.js"></script>
+    <script>
+        let dbHab = {}, dbMov = {};
+
+        async function initApp() {
+            // ¡PON TUS LINKS CSV DE GOOGLE SHEETS AQUÍ!
+            const urlHab = "TU_ENLACE_CSV_HABILIDADES_AQUI";
+            const urlMov = "TU_ENLACE_CSV_MOVIMIENTOS_AQUI";
+
+            try {
+                const [resH, resM] = await Promise.all([fetch(urlHab), fetch(urlMov)]);
+                const [txtH, txtM] = await Promise.all([resH.text(), resM.text()]);
+                
+                // Procesar Habilidades (Excel): id, nombre, desc
+                txtH.split('\n').slice(1).forEach(l => { 
+                    const [id, nombre, desc] = l.replace(/\r/g,'').split(','); 
+                    if(id) dbHab[id.trim()] = { nombre: nombre?.trim(), desc: desc?.trim() }; 
+                });
+
+                // Procesar Movimientos (Excel): id, nombre, cat, tipo, pot, pre, pp, desc
+                txtM.split('\n').slice(1).forEach(l => {
+                    const [id, nombre, cat, tipo, pot, pre, pp, desc] = l.replace(/\r/g,'').split(',');
+                    if(id) {
+                        dbMov[id.trim()] = { 
+                            nombre: nombre?.trim(),
+                            cat: cat?.trim().toLowerCase(), 
+                            tipo: tipo?.trim(), 
+                            pot, pre, pp, desc 
+                        };
+                    }
+                });
+                renderHome();
+            } catch (e) { console.error("Error cargando el Excel", e); renderHome(); }
+        }
+
+        // Buscador
+        function searchPoke() {
+            const query = document.getElementById('pokeSearch').value.toLowerCase();
+            const cards = document.getElementsByClassName('card');
+            for (let card of cards) {
+                const name = card.getAttribute('data-name').toLowerCase();
+                card.style.display = name.includes(query) ? "block" : "none";
+            }
+        }
+
+        function renderHome() {
+            document.getElementById('search-container').style.display = "block";
+            const container = document.getElementById('app');
+            misPokes.sort((a,b) => a.num - b.num || a.id.localeCompare(b.id));
+
+            container.innerHTML = `<div class="grid">${misPokes.map(p => `
+                <div class="card" onclick="renderDetail('${p.id}')" data-name="${p.name}">
+                    <img src="assets/sprites/${p.id}.png">
+                    <p>#${p.num} <strong>${p.name}</strong></p>
+                    <div class="types-row">${p.types.map(t => `<img src="assets/tipos/${t.toLowerCase()}.png" class="type-icon">`).join('')}</div>
+                </div>
+            `).join('')}</div>`;
+        }
+
+        function renderDetail(id) {
+            document.getElementById('search-container').style.display = "none";
+            const p = misPokes.find(poke => poke.id === id);
+            const container = document.getElementById('app');
+
+            const buildTable = (list) => {
+                if(!list || list.length === 0) return "<p>No hay movimientos registrados.</p>";
+                return `<table>
+                    <thead><tr><th>Lv</th><th>Movimiento</th><th>Tipo</th><th>Cat</th></tr></thead>
+                    ${list.map(m => {
+                        const mData = dbMov[m.id] || { nombre: m.id, tipo: "Normal" };
+                        const hasStab = p.types.includes(mData.tipo);
+                        
+                        return `<tr class="tooltip ${hasStab ? 'stab-row' : ''}">
+                            <td>${m.lv || '-'}</td>
+                            <td>${mData.nombre} ${hasStab ? '★' : ''}</td>
+                            <td><img src="assets/tipos/${mData.tipo.toLowerCase()}.png" class="type-icon" onerror="this.style.display='none'"></td>
+                            <td><img src="assets/categorias/${mData.cat || 'estado'}.png" class="cat-icon" onerror="this.style.display='none'"></td>
+                            <div class="tooltiptext">
+                                POD: ${mData.pot || '-'} | PRE: ${mData.pre || '-'} | PP: ${mData.pp || '-'}
+                                <hr>${mData.desc || 'Falta en Excel'}
+                            </div>
+                        </tr>`;
+                    }).join('')}
+                </table>`;
+            };
+
+            // Construir HTML de habilidades
+            const habHTML = p.abilities.map(a => {
+                const hData = dbHab[a.id] || { nombre: a.id, desc: "Falta en Excel" };
+                return `<div class="tooltip hab-box">
+                    <strong>${a.type}:</strong> ${hData.nombre}
+                    <div class="tooltiptext">${hData.desc}</div>
+                </div>`;
+            }).join('');
+
+            container.innerHTML = `
+                <div class="detail-view">
+                    <button class="back-btn" onclick="renderHome()">⬅ Volver a la Pokédex</button>
+                    
+                    <div class="header-ficha">
+                        <img src="assets/sprites/${p.id}.png" class="large-sprite">
+                        <div class="ficha-info">
+                            <h2>#${p.num} ${p.name}</h2>
+                            <p class="flavor-text">${p.category}</p>
+                            <div class="types-row">${p.types.map(t => `<img src="assets/tipos/${t.toLowerCase()}.png" class="type-icon">`).join('')}</div>
+                        </div>
+                    </div>
+
+                    ${p.credits ? `
+                    <div class="credits-section">
+                        <div class="credit-col"><strong>🎨 Diseño:</strong><br>${p.credits.design}</div>
+                        <div class="credit-col"><strong>👾 Sprite:</strong><br>${p.credits.sprite}</div>
+                    </div>` : ''}
+
+                    <div class="secciones-grid">
+                        <div class="seccion">
+                            <h3>Estadísticas Base</h3>
+                            ${Object.entries(p.stats).map(([k,v]) => `
+                                <div class="stat-row">
+                                    <span class="stat-name">${k.toUpperCase()}</span>
+                                    <span class="stat-num">${v}</span>
+                                    <div class="bar-bg"><div class="bar-fill" style="width:${Math.min((v/255)*100, 100)}%; background:${v>90?'#47d147':v>60?'#ffcc00':'#ff4d4d'}"></div></div>
+                                </div>
+                            `).join('')}
+                        </div>
+                        <div class="seccion">
+                            <h3>Habilidades</h3>
+                            ${habHTML}
+                        </div>
+                    </div>
+
+                    <div class="seccion">
+                        <h3>Línea Evolutiva</h3>
+                        <div class="evo-container">
+                            ${p.evolution.prevo ? `<div class="evo-unit" onclick="renderDetail('${p.evolution.prevo.id}')"><img src="assets/sprites/${p.evolution.prevo.id}.png"><br><small>${p.evolution.prevo.method}</small></div>` : ''}
+                            <div class="evo-unit active-evo"><img src="assets/sprites/${p.id}.png"><br><small>Actual</small></div>
+                            ${p.evolution.evos.map(e => `<div class="evo-unit" onclick="renderDetail('${e.id}')"><img src="assets/sprites/${e.id}.png"><br><small>${e.method}</small></div>`).join('')}
+                        </div>
+                    </div>
+
+                    <div class="seccion" style="margin-top: 20px;">
+                        <h3>Movimientos por Nivel</h3>
+                        ${buildTable(p.moves.level)}
+                    </div>
+                </div>`;
+            window.scrollTo(0,0);
+        }
+
+        initApp();
+    </script>
+</body>
+</html>

@@ -21,7 +21,6 @@
         let dbHab = {}, dbMov = {};
 
         async function initApp() {
-            // ¡PON TUS LINKS CSV DE GOOGLE SHEETS AQUÍ!
             const urlHab = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTqOAEkDEGylIHEmPV9zLCNhAA91W_V3pevcjDGxGqjtoIsSw1M0uD0Ya4c-OyWz9PChbcJ4HHP6rB-/pub?output=csv";
             const urlMov = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSI6To38jAVH_zsa4qtGf0k1ZHhlwtqWmdBcgoYwBe4DKS6DbeNa0iWT5gljWJsSIR5CZJjKmqDIuyP/pub?output=csv";
 
@@ -29,29 +28,38 @@
                 const [resH, resM] = await Promise.all([fetch(urlHab), fetch(urlMov)]);
                 const [txtH, txtM] = await Promise.all([resH.text(), resM.text()]);
                 
-                // Procesar Habilidades (Excel): id, nombre, desc
+                // Procesar Habilidades (Forzamos ID a mayúsculas para evitar fallos de matching)
                 txtH.split('\n').slice(1).forEach(l => { 
                     const [id, nombre, desc] = l.replace(/\r/g,'').split(','); 
-                    if(id) dbHab[id.trim()] = { nombre: nombre?.trim(), desc: desc?.trim() }; 
+                    if(id) {
+                        const cleanId = id.trim().toUpperCase();
+                        dbHab[cleanId] = { nombre: nombre?.trim(), desc: desc?.trim() }; 
+                    }
                 });
 
-                // Procesar Movimientos (Excel): id, nombre, cat, tipo, pot, pre, pp, desc
+                // Procesar Movimientos (Forzamos ID a mayúsculas)
                 txtM.split('\n').slice(1).forEach(l => {
                     const [id, nombre, cat, tipo, pot, pre, pp, desc] = l.replace(/\r/g,'').split(',');
                     if(id) {
-                        dbMov[id.trim()] = { 
+                        const cleanId = id.trim().toUpperCase();
+                        dbMov[cleanId] = { 
                             nombre: nombre?.trim(),
                             cat: cat?.trim().toLowerCase(), 
                             tipo: tipo?.trim(), 
-                            pot, pre, pp, desc 
+                            pot: pot?.trim(), 
+                            pre: pre?.trim(), 
+                            pp: pp?.trim(), 
+                            desc: desc?.trim() 
                         };
                     }
                 });
                 renderHome();
-            } catch (e) { console.error("Error cargando el Excel", e); renderHome(); }
+            } catch (e) { 
+                console.error("Error cargando el Excel", e); 
+                renderHome(); 
+            }
         }
 
-        // Buscador
         function searchPoke() {
             const query = document.getElementById('pokeSearch').value.toLowerCase();
             const cards = document.getElementsByClassName('card');
@@ -68,9 +76,8 @@
 
             container.innerHTML = `<div class="grid">${misPokes.map(p => `
                 <div class="card" onclick="renderDetail('${p.id}')" data-name="${p.name}">
-                    <img src="assets/sprites/${p.id}.png">
-                    <p>#${p.num} <strong>${p.name}</strong></p>
-                    <div class="types-row">${p.types.map(t => `<img src="assets/tipos/${t.toLowerCase()}.png" class="type-icon">`).join('')}</div>
+                    <img src="sprites/${p.id}.png" onerror="this.src='sprites/1.png'"><p>#${p.num} <strong>${p.name}</strong></p>
+                    <div class="types-row">${p.types.map(t => `<img src="tipos/${t}.png" class="type-icon" title="${t}">`).join('')}</div>
                 </div>
             `).join('')}</div>`;
         }
@@ -80,31 +87,45 @@
             const p = misPokes.find(poke => poke.id === id);
             const container = document.getElementById('app');
 
-            const buildTable = (list) => {
+            // isTutor nos sirve para saber si ocultar o mostrar la columna "Lv"
+            const buildTable = (list, isTutor = false) => {
                 if(!list || list.length === 0) return "<p>No hay movimientos registrados.</p>";
                 return `<table>
-                    <thead><tr><th>Lv</th><th>Movimiento</th><th>Tipo</th><th>Cat</th></tr></thead>
+                    <thead>
+                        <tr>
+                            ${isTutor ? '' : '<th>Lv</th>'}
+                            <th>Movimiento</th>
+                            <th>Tipo</th>
+                            <th>Cat</th>
+                        </tr>
+                    </thead>
+                    <tbody>
                     ${list.map(m => {
-                        const mData = dbMov[m.id] || { nombre: m.id, tipo: "Normal" };
-                        const hasStab = p.types.includes(mData.tipo);
+                        const searchId = m.id.toUpperCase();
+                        const mData = dbMov[searchId] || { nombre: m.id, tipo: "Normal", cat: "estado" };
+                        const moveType = mData.tipo || "Normal";
+                        const hasStab = p.types.includes(moveType);
                         
-                        return `<tr class="tooltip ${hasStab ? 'stab-row' : ''}">
-                            <td>${m.lv || '-'}</td>
-                            <td>${mData.nombre} ${hasStab ? '★' : ''}</td>
-                            <td><img src="assets/tipos/${mData.tipo.toLowerCase()}.png" class="type-icon" onerror="this.style.display='none'"></td>
-                            <td><img src="assets/categorias/${mData.cat || 'estado'}.png" class="cat-icon" onerror="this.style.display='none'"></td>
-                            <div class="tooltiptext">
-                                POD: ${mData.pot || '-'} | PRE: ${mData.pre || '-'} | PP: ${mData.pp || '-'}
-                                <hr>${mData.desc || 'Falta en Excel'}
-                            </div>
+                        return `<tr class="${hasStab ? 'stab-row' : ''}">
+                            ${isTutor ? '' : `<td>${m.lv || '-'}</td>`}
+                            <td class="tooltip">
+                                <strong>${mData.nombre}</strong> ${hasStab ? '★' : ''}
+                                <div class="tooltiptext">
+                                    POD: ${mData.pot || '-'} | PRE: ${mData.pre || '-'} | PP: ${mData.pp || '-'}
+                                    <hr>${mData.desc || 'Falta en Excel'}
+                                </div>
+                            </td>
+                            <td><img src="tipos/${moveType}.png" class="type-icon" onerror="this.style.display='none'"></td>
+                            <td><img src="categorias/${mData.cat || 'estado'}.png" class="cat-icon" onerror="this.style.display='none'"></td>
                         </tr>`;
                     }).join('')}
+                    </tbody>
                 </table>`;
             };
 
-            // Construir HTML de habilidades
             const habHTML = p.abilities.map(a => {
-                const hData = dbHab[a.id] || { nombre: a.id, desc: "Falta en Excel" };
+                const searchId = a.id.toUpperCase();
+                const hData = dbHab[searchId] || { nombre: a.id, desc: "Falta en Excel" };
                 return `<div class="tooltip hab-box">
                     <strong>${a.type}:</strong> ${hData.nombre}
                     <div class="tooltiptext">${hData.desc}</div>
@@ -116,11 +137,11 @@
                     <button class="back-btn" onclick="renderHome()">⬅ Volver a la Pokédex</button>
                     
                     <div class="header-ficha">
-                        <img src="assets/sprites/${p.id}.png" class="large-sprite">
+                        <img src="sprites/${p.id}.png" class="large-sprite">
                         <div class="ficha-info">
                             <h2>#${p.num} ${p.name}</h2>
                             <p class="flavor-text">${p.category}</p>
-                            <div class="types-row">${p.types.map(t => `<img src="assets/tipos/${t.toLowerCase()}.png" class="type-icon">`).join('')}</div>
+                            <div class="types-row">${p.types.map(t => `<img src="tipos/${t}.png" class="type-icon">`).join('')}</div>
                         </div>
                     </div>
 
@@ -150,15 +171,20 @@
                     <div class="seccion">
                         <h3>Línea Evolutiva</h3>
                         <div class="evo-container">
-                            ${p.evolution.prevo ? `<div class="evo-unit" onclick="renderDetail('${p.evolution.prevo.id}')"><img src="assets/sprites/${p.evolution.prevo.id}.png"><br><small>${p.evolution.prevo.method}</small></div>` : ''}
-                            <div class="evo-unit active-evo"><img src="assets/sprites/${p.id}.png"><br><small>Actual</small></div>
-                            ${p.evolution.evos.map(e => `<div class="evo-unit" onclick="renderDetail('${e.id}')"><img src="assets/sprites/${e.id}.png"><br><small>${e.method}</small></div>`).join('')}
+                            ${p.evolution.prevo ? `<div class="evo-unit" onclick="renderDetail('${p.evolution.prevo.id}')"><img src="sprites/${p.evolution.prevo.id}.png"><br><small>${p.evolution.prevo.method}</small></div>` : ''}
+                            <div class="evo-unit active-evo"><img src="sprites/${p.id}.png"><br><small>Actual</small></div>
+                            ${p.evolution.evos.map(e => `<div class="evo-unit" onclick="renderDetail('${e.id}')"><img src="sprites/${e.id}.png"><br><small>${e.method}</small></div>`).join('')}
                         </div>
                     </div>
 
                     <div class="seccion" style="margin-top: 20px;">
                         <h3>Movimientos por Nivel</h3>
                         ${buildTable(p.moves.level)}
+                    </div>
+                    
+                    <div class="seccion" style="margin-top: 20px;">
+                        <h3>Movimientos por Tutor / MT</h3>
+                        ${buildTable(p.moves.tutor, true)}
                     </div>
                 </div>`;
             window.scrollTo(0,0);

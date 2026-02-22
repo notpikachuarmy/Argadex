@@ -1935,5 +1935,329 @@ const misPokes = [
             egg: []
         }
     },
+    {
+        id: "28-jagara",
+        num: 28,
+        name: "Wooper",
+        types: ["Planta", "Tierra"],
+        category: "TRABAJANDO",
+        flavor: "TRABAJANDO",
+        stats: { hp: 1, atk: 1, def: 1, spa: 1, spd: 1, spe: 1 }, // Stats base de Wooper
+        abilities: [
+            { type: "Habilidad", id: "TRABAJANDO" }
+        ],
+        evolution: {
+            prevo: null,
+            evos: [{ id: "31", method: "Nivel 20" }]
+        },
+        credits: { design: "Rezatri", sprite: "Rezatri" },
+        moves: {
+            level: [{ lv: 1, id: "TRABAJANDO" }],
+            tutor: [],
+            egg: []
+        }
+    },
+    {
+        id: "31",
+        num: 31,
+        name: "Entise",
+        types: ["Planta", "Tierra"],
+        category: "TRABAJANDO",
+        flavor: "TRABAJANDO",
+        stats: { hp: 1, atk: 1, def: 1, spa: 1, spd: 1, spe: 1 }, // Stats de ejemplo
+        abilities: [
+            { type: "Habilidad", id: "TRABAJANDO" }
+        ],
+        evolution: {
+            prevo: { id: "28-jagara", method: "Nivel 20" },
+            evos: []
+        },
+        credits: { design: "Rezatri", sprite: "Rezatri" },
+        moves: {
+            level: [{ lv: 1, id: "TRABAJANDO" }],
+            tutor: [],
+            egg: []
+        }
+    },
+    {
+        id: "32",
+        num: 32,
+        name: "Goomy",
+        types: ["Dragón"],
+        category: "Molusco",
+        flavor: "Es el Pokémon de tipo Dragón más débil. Habita en zonas oscuras y húmedas para evitar que su viscoso cuerpo se seque.",
+        stats: { hp: 45, atk: 50, def: 35, spa: 55, spd: 75, spe: 40 },
+        abilities: [
+            { type: "Habilidad 1", id: "SAPSIPPER" },
+            { type: "Habilidad 2", id: "HYDRATION" },
+            { type: "Oculta", id: "GOOEY" }
+        ],
+        evolution: {
+            prevo: null,
+            evos: [{ id: "33", method: "Nivel 40" }]
+        },
+        credits: { design: "GameFreak", sprite: "GameFreak" },
+        moves: {
+            level: [
+                { lv: 1, id: "ABSORB" }, { lv: 1, id: "TACKLE" }, { lv: 5, id: "WATERGUN" },
+                { lv: 10, id: "DRAGONBREATH" }, { lv: 15, id: "PROTECT" }, { lv: 20, id: "FLAIL" },
+                { lv: 25, id: "WATERPULSE" }, { lv: 30, id: "RAINDANCE" }, { lv: 35, id: "DRAGONPULSE" },
+                { lv: 41, id: "CURSE" }, { lv: 45, id: "BODYSLAM" }, { lv: 50, id: "MUDDYWATER" }
+            ],
+            tutor: [
+                { id: "ATTRACT" }, { id: "BODYSLAM" }, { id: "CAPTIVATE" }, { id: "CONFIDE" }, { id: "DOUBLETEAM" },
+                { id: "DRACOMETEOR" }, { id: "DRAGONPULSE" }, { id: "ENDURE" }, { id: "FACADE" }, { id: "FRUSTRATION" },
+                { id: "HIDDENPOWER" }, { id: "INFESTATION" }, { id: "IRONTAIL" }, { id: "MIMIC" }, { id: "MUDDYWATER" },
+                { id: "MUDSHOT" }, { id: "NATURALGIFT" }, { id: "OUTRAGE" }, { id: "PROTECT" }, { id: "RAINDANCE" },
+                { id: "REST" }, { id: "RETURN" }, { id: "ROCKSLIDE" }, { id: "ROUND" }, { id: "SECRETPOWER" },
+                { id: "SHOCKWAVE" }, { id: "SKITTERSMACK" }, { id: "SLEEPTALK" }, { id: "SLUDGEBOMB" }, { id: "SLUDGEWAVE" },
+                { id: "SNORE" }, { id: "SUBSTITUTE" }, { id: "SUNNYDAY" }, { id: "SWAGGER" }, { id: "THUNDERBOLT" },
+                { id: "TOXIC" }, { id: "WATERPULSE" }, { id: "TAKEDOWN" }, { id: "CHARM" }, { id: "CHILLINGWATER" },
+                { id: "CURSE" }, { id: "ELECTROSHOT" }
+            ],
+            egg: [
+                { id: "COUNTER" }, { id: "LIFEDEW" }
+            ]
+        }
+    },
+    {
+        id: "33",
+        num: 33,
+        name: "Sliggoo",
+        types: ["Dragón"],
+        category: "Molusco",
+        flavor: "Segrega una mucosidad que corroe todo lo que toca y consigue así ahuyentar al enemigo. Sus ojos han involucionado, por lo que no puede ver.",
+        stats: { hp: 68, atk: 75, def: 53, spa: 83, spd: 113, spe: 60 },
+        abilities: [
+            { type: "Habilidad 1", id: "SAPSIPPER" },
+            { type: "Habilidad 2", id: "HYDRATION" },
+            { type: "Oculta", id: "GOOEY" }
+        ],
+        evolution: {
+            prevo: { id: "32", method: "Nivel 40" },
+            evos: [{ id: "34", method: "Nivel 50 (Lluvia)" }]
+        },
+        credits: { design: "GameFreak", sprite: "GameFreak" },
+        moves: {
+            level: [
+                { lv: -1, id: "ACIDSPRAY" }, { lv: 1, id: "ABSORB" }, { lv: 1, id: "TACKLE" },
+                { lv: 1, id: "WATERGUN" }, { lv: 1, id: "DRAGONBREATH" }, { lv: 1, id: "ACIDARMOR" },
+                { lv: 15, id: "PROTECT" }, { lv: 20, id: "FLAIL" }, { lv: 25, id: "WATERPULSE" },
+                { lv: 30, id: "RAINDANCE" }, { lv: 35, id: "DRAGONPULSE" }, { lv: 43, id: "CURSE" },
+                { lv: 49, id: "BODYSLAM" }, { lv: 56, id: "MUDDYWATER" }
+            ],
+            tutor: [
+                { id: "ATTRACT" }, { id: "BLIZZARD" }, { id: "BODYSLAM" }, { id: "CAPTIVATE" }, { id: "CONFIDE" },
+                { id: "DOUBLETEAM" }, { id: "DRACOMETEOR" }, { id: "DRAGONPULSE" }, { id: "ENDURE" }, { id: "FACADE" },
+                { id: "FRUSTRATION" }, { id: "HIDDENPOWER" }, { id: "ICEBEAM" }, { id: "INFESTATION" }, { id: "IRONTAIL" },
+                { id: "MIMIC" }, { id: "MUDDYWATER" }, { id: "MUDSHOT" }, { id: "NATURALGIFT" }, { id: "OUTRAGE" },
+                { id: "PROTECT" }, { id: "RAINDANCE" }, { id: "REST" }, { id: "RETURN" }, { id: "ROCKSLIDE" },
+                { id: "ROUND" }, { id: "SECRETPOWER" }, { id: "SHOCKWAVE" }, { id: "SKITTERSMACK" }, { id: "SLEEPTALK" },
+                { id: "SLUDGEBOMB" }, { id: "SLUDGEWAVE" }, { id: "SNORE" }, { id: "SUBSTITUTE" }, { id: "SUNNYDAY" },
+                { id: "SWAGGER" }, { id: "THUNDERBOLT" }, { id: "TOXIC" }, { id: "WATERPULSE" }, { id: "TAKEDOWN" },
+                { id: "CHARM" }, { id: "ACIDSPRAY" }, { id: "CHILLINGWATER" }, { id: "THUNDER" }, { id: "CURSE" },
+                { id: "ELECTROSHOT" }
+            ],
+            egg: []
+        }
+    },
+    {
+        id: "34",
+        num: 34,
+        name: "Goodra",
+        types: ["Dragón"],
+        category: "Dragón",
+        flavor: "Pokémon de tipo Dragón muy afable al que le gusta abrazar con efusión a su Entrenador, aunque después lo deja totalmente pringado.",
+        stats: { hp: 90, atk: 100, def: 70, spa: 110, spd: 150, spe: 80 },
+        abilities: [
+            { type: "Habilidad 1", id: "SAPSIPPER" },
+            { type: "Habilidad 2", id: "HYDRATION" },
+            { type: "Oculta", id: "GOOEY" }
+        ],
+        evolution: {
+            prevo: { id: "33", method: "Nivel 50 (Lluvia)" },
+            evos: []
+        },
+        credits: { design: "GameFreak", sprite: "GameFreak" },
+        moves: {
+            level: [
+                { lv: -1, id: "AQUATAIL" }, { lv: 1, id: "ACIDSPRAY" }, { lv: 1, id: "POISONTAIL" },
+                { lv: 1, id: "TEARFULLOOK" }, { lv: 1, id: "FEINT" }, { lv: 1, id: "ABSORB" },
+                { lv: 1, id: "TACKLE" }, { lv: 1, id: "WATERGUN" }, { lv: 1, id: "DRAGONBREATH" },
+                { lv: 15, id: "PROTECT" }, { lv: 20, id: "FLAIL" }, { lv: 25, id: "WATERPULSE" },
+                { lv: 30, id: "RAINDANCE" }, { lv: 35, id: "DRAGONPULSE" }, { lv: 43, id: "CURSE" },
+                { lv: 49, id: "BODYSLAM" }, { lv: 58, id: "MUDDYWATER" }, { lv: 67, id: "POWERWHIP" }
+            ],
+            tutor: [
+                { id: "AQUATAIL" }, { id: "ASSURANCE" }, { id: "ATTRACT" }, { id: "BLIZZARD" }, { id: "BODYPRESS" },
+                { id: "BODYSLAM" }, { id: "BREAKINGSWIPE" }, { id: "BRUTALSWING" }, { id: "BULLDOZE" }, { id: "CAPTIVATE" },
+                { id: "CONFIDE" }, { id: "DOUBLETEAM" }, { id: "DRACOMETEOR" }, { id: "DRAGONPULSE" }, { id: "DRAGONTAIL" },
+                { id: "EARTHQUAKE" }, { id: "ENDURE" }, { id: "FACADE" }, { id: "FIREBLAST" }, { id: "FIREPUNCH" },
+                { id: "FLAMETHROWER" }, { id: "FOCUSBLAST" }, { id: "FOCUSPUNCH" }, { id: "FRUSTRATION" }, { id: "GIGAIMPACT" },
+                { id: "HAIL" }, { id: "HIDDENPOWER" }, { id: "HYDROPUMP" }, { id: "HYPERBEAM" }, { id: "ICEBEAM" },
+                { id: "INCINERATE" }, { id: "INFESTATION" }, { id: "IRONTAIL" }, { id: "LASERFOCUS" }, { id: "MEGAKICK" },
+                { id: "MEGAPUNCH" }, { id: "MIMIC" }, { id: "MUDDYWATER" }, { id: "MUDSHOT" }, { id: "NATURALGIFT" },
+                { id: "OUTRAGE" }, { id: "POWERWHIP" }, { id: "PROTECT" }, { id: "RAINDANCE" }, { id: "REST" },
+                { id: "RETURN" }, { id: "ROCKSLIDE" }, { id: "ROCKSMASH" }, { id: "ROUND" }, { id: "SECRETPOWER" },
+                { id: "SHOCKWAVE" }, { id: "SKITTERSMACK" }, { id: "SLEEPTALK" }, { id: "SLUDGEBOMB" }, { id: "SLUDGEWAVE" },
+                { id: "SNORE" }, { id: "STOMPINGTANTRUM" }, { id: "STRENGTH" }, { id: "SUBSTITUTE" }, { id: "SUNNYDAY" },
+                { id: "SUPERPOWER" }, { id: "SURF" }, { id: "SWAGGER" }, { id: "THUNDER" }, { id: "THUNDERBOLT" },
+                { id: "THUNDERPUNCH" }, { id: "TOXIC" }, { id: "WATERPULSE" }, { id: "WEATHERBALL" }, { id: "TAKEDOWN" },
+                { id: "CHARM" }, { id: "ACIDSPRAY" }, { id: "CHILLINGWATER" }, { id: "POISONTAIL" }, { id: "DRAGONCLAW" },
+                { id: "KNOCKOFF" }, { id: "SCALD" }, { id: "CURSE" }, { id: "DRAGONCHEER" }, { id: "ELECTROSHOT" }
+            ],
+            egg: []
+        }
+    },
+    {
+        id: "33-hisui",
+        num: 33,
+        name: "Sliggoo",
+        types: ["Acero", "Dragón"],
+        category: "Caracol",
+        flavor: "Adolece de una personalidad lúgubre. Su concha metálica se formó mediante una reacción entre su mucosidad y el contenido férreo del agua de Hisui.",
+        stats: { hp: 58, atk: 75, def: 83, spa: 83, spd: 113, spe: 40 },
+        abilities: [
+            { type: "Habilidad 1", id: "SAPSIPPER" },
+            { type: "Habilidad 2", id: "SHELLARMOR" },
+            { type: "Oculta", id: "GOOEY" }
+        ],
+        evolution: {
+            prevo: { id: "32", method: "Nivel 40 en Hisui" },
+            evos: [{ id: "34-hisui", method: "Nivel 50 (Lluvia)" }]
+        },
+        credits: { design: "GameFreak", sprite: "GameFreak" },
+        moves: {
+            level: [
+                { lv: 0, id: "SHELTER" }, { lv: 1, id: "ACIDARMOR" }, { lv: 1, id: "DRAGONBREATH" },
+                { lv: 1, id: "TACKLE" }, { lv: 1, id: "WATERGUN" }, { lv: 1, id: "ABSORB" },
+                { lv: 15, id: "PROTECT" }, { lv: 20, id: "FLAIL" }, { lv: 25, id: "WATERPULSE" },
+                { lv: 30, id: "RAINDANCE" }, { lv: 35, id: "DRAGONPULSE" }, { lv: 43, id: "CURSE" },
+                { lv: 49, id: "IRONHEAD" }, { lv: 56, id: "MUDDYWATER" }
+            ],
+            tutor: [
+                { id: "ACIDSPRAY" }, { id: "BLIZZARD" }, { id: "BODYSLAM" }, { id: "CHARM" }, { id: "CHILLINGWATER" },
+                { id: "CURSE" }, { id: "DRACOMETEOR" }, { id: "DRAGONPULSE" }, { id: "ENDURE" }, { id: "FACADE" },
+                { id: "FLASHCANNON" }, { id: "GYROBALL" }, { id: "HEAVYSLAM" }, { id: "ICEBEAM" }, { id: "ICESPINNER" },
+                { id: "IRONHEAD" }, { id: "MUDDYWATER" }, { id: "MUDSHOT" }, { id: "OUTRAGE" }, { id: "PROTECT" },
+                { id: "RAINDANCE" }, { id: "REST" }, { id: "ROCKSLIDE" }, { id: "ROCKTOMB" }, { id: "SANDSTORM" },
+                { id: "SKITTERSMACK" }, { id: "SLEEPTALK" }, { id: "SLUDGEBOMB" }, { id: "SLUDGEWAVE" }, { id: "STEELBEAM" },
+                { id: "SUBSTITUTE" }, { id: "SUNNYDAY" }, { id: "TAKEDOWN" }, { id: "THUNDER" }, { id: "THUNDERBOLT" },
+                { id: "WATERPULSE" }, { id: "ELECTROSHOT" }
+            ],
+            egg: []
+        }
+    },
+    {
+        id: "34-hisui",
+        num: 34,
+        name: "Goodra",
+        types: ["Acero", "Dragón"],
+        category: "Retracción",
+        flavor: "Puede alterar la dureza de su caparazón metálico a voluntad. De carácter dependiente, detesta la soledad y monta en cólera si lo abandonan.",
+        stats: { hp: 80, atk: 100, def: 100, spa: 110, spd: 150, spe: 60 },
+        abilities: [
+            { type: "Habilidad 1", id: "SAPSIPPER" },
+            { type: "Habilidad 2", id: "SHELLARMOR" },
+            { type: "Oculta", id: "GOOEY" }
+        ],
+        evolution: {
+            prevo: { id: "33-hisui", method: "Nivel 50 (Lluvia)" },
+            evos: []
+        },
+        credits: { design: "GameFreak", sprite: "GameFreak" },
+        moves: {
+            level: [
+                { lv: 0, id: "IRONTAIL" }, { lv: 1, id: "SHELTER" }, { lv: 1, id: "ACIDSPRAY" },
+                { lv: 1, id: "FEINT" }, { lv: 1, id: "TEARFULLOOK" }, { lv: 1, id: "DRAGONBREATH" },
+                { lv: 1, id: "TACKLE" }, { lv: 1, id: "ABSORB" }, { lv: 1, id: "WATERGUN" },
+                { lv: 15, id: "PROTECT" }, { lv: 20, id: "FLAIL" }, { lv: 25, id: "WATERPULSE" },
+                { lv: 30, id: "RAINDANCE" }, { lv: 35, id: "DRAGONPULSE" }, { lv: 43, id: "CURSE" },
+                { lv: 49, id: "BODYSLAM" }, { lv: 49, id: "IRONHEAD" }, { lv: 58, id: "MUDDYWATER" },
+                { lv: 67, id: "HEAVYSLAM" }
+            ],
+            tutor: [
+                { id: "ACIDSPRAY" }, { id: "BLIZZARD" }, { id: "BODYPRESS" }, { id: "BODYSLAM" }, { id: "BREAKINGSWIPE" },
+                { id: "BULLDOZE" }, { id: "CHARM" }, { id: "CHILLINGWATER" }, { id: "CURSE" }, { id: "DRACOMETEOR" },
+                { id: "DRAGONCHEER" }, { id: "DRAGONCLAW" }, { id: "DRAGONPULSE" }, { id: "DRAGONTAIL" }, { id: "EARTHQUAKE" },
+                { id: "ENDURE" }, { id: "FACADE" }, { id: "FIREBLAST" }, { id: "FIREPUNCH" }, { id: "FLAMETHROWER" },
+                { id: "FLASHCANNON" }, { id: "GIGAIMPACT" }, { id: "GYROBALL" }, { id: "HEAVYSLAM" }, { id: "HYDROPUMP" },
+                { id: "HYPERBEAM" }, { id: "ICEBEAM" }, { id: "ICESPINNER" }, { id: "IRONHEAD" }, { id: "KNOCKOFF" },
+                { id: "LASHOUT" }, { id: "MUDDYWATER" }, { id: "MUDSHOT" }, { id: "OUTRAGE" }, { id: "PROTECT" },
+                { id: "RAINDANCE" }, { id: "REST" }, { id: "ROCKSLIDE" }, { id: "ROCKTOMB" }, { id: "SANDSTORM" },
+                { id: "SCARYFACE" }, { id: "SKITTERSMACK" }, { id: "SLEEPTALK" }, { id: "SLUDGEBOMB" }, { id: "SLUDGEWAVE" },
+                { id: "STEELBEAM" }, { id: "STOMPINGTANTRUM" }, { id: "SUBSTITUTE" }, { id: "SUNNYDAY" }, { id: "SURF" },
+                { id: "TAKEDOWN" }, { id: "THUNDER" }, { id: "THUNDERBOLT" }, { id: "THUNDERPUNCH" }, { id: "WATERPULSE" },
+                { id: "WEATHERBALL" }, { id: "ELECTROSHOT" }
+            ],
+            egg: []
+        }
+    },
+    {
+        id: "32-tenebria",
+        num: 32,
+        name: "Goomy",
+        types: ["Fantasma", "Dragón"],
+        category: "TRABAJANDO",
+        flavor: "TRABAJANDO",
+        stats: { hp: 1, atk: 1, def: 1, spa: 1, spd: 1, spe: 1 },
+        abilities: [
+            { type: "Habilidad", id: "TRABAJANDO" }
+        ],
+        evolution: {
+            prevo: null,
+            evos: [{ id: "33-tenebria", method: "Nivel 40" }]
+        },
+        credits: { design: "Rezatri", sprite: "Rezatri" },
+        moves: {
+            level: [{ lv: 1, id: "TRABAJANDO" }],
+            tutor: [],
+            egg: []
+        }
+    },
+    {
+        id: "33-tenebria",
+        num: 33,
+        name: "Sliggoo",
+        types: ["Fantasma", "Dragón"],
+        category: "TRABAJANDO",
+        flavor: "TRABAJANDO",
+        stats: { hp: 1, atk: 1, def: 1, spa: 1, spd: 1, spe: 1 },
+        abilities: [
+            { type: "Habilidad", id: "TRABAJANDO" }
+        ],
+        evolution: {
+            prevo: { id: "32-tenebria", method: "Nivel 40" },
+            evos: [{ id: "34-tenebria", method: "Nivel 50" }]
+        },
+        credits: { design: "Rezatri", sprite: "Rezatri" },
+        moves: {
+            level: [{ lv: 1, id: "TRABAJANDO" }],
+            tutor: [],
+            egg: []
+        }
+    },
+    {
+        id: "34-tenebria",
+        num: 34,
+        name: "Goodra",
+        types: ["Fantasma", "Dragón"],
+        category: "TRABAJANDO",
+        flavor: "TRABAJANDO",
+        stats: { hp: 1, atk: 1, def: 1, spa: 1, spd: 1, spe: 1 },
+        abilities: [
+            { type: "Habilidad", id: "TRABAJANDO" }
+        ],
+        evolution: {
+            prevo: { id: "33-tenebria", method: "Nivel 50" },
+            evos: []
+        },
+        credits: { design: "Rezatri", sprite: "Rezatri" },
+        moves: {
+            level: [{ lv: 1, id: "TRABAJANDO" }],
+            tutor: [],
+            egg: []
+        }
+    },
 ];
 

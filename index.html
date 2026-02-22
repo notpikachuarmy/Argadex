@@ -89,7 +89,18 @@
 
             const formas = misPokes.filter(f => f.num === p.num);
             let selectorFormas = "";
+            
             if (formas.length > 1) {
+                const getFormName = (formId) => {
+                    if (!formId.includes('-')) return "Base"; 
+                    
+                    const sufijo = formId.split('-')[1].toLowerCase(); 
+                    
+                    if (sufijo === 'comida') return "Gourmet"; 
+                    
+                    return sufijo.charAt(0).toUpperCase() + sufijo.slice(1);
+                };
+
                 selectorFormas = `
                     <div class="seccion" style="text-align: center; background:rgba(0,0,0,0.05); padding:15px; border-radius:10px; margin-bottom:20px;">
                         <h3 style="margin: 0 0 15px 0; border-bottom:none; font-size: 1.1em; letter-spacing: 2px;">FORMAS</h3>
@@ -98,7 +109,7 @@
                                 <div class="evo-unit ${f.id === p.id ? 'active-evo' : ''}" onclick="renderDetail('${f.id}')" style="cursor:pointer">
                                     <img src="sprites/${f.id}.png" style="width:60px; height:60px; object-fit:contain;">
                                     <br><small style="font-weight:bold; color:${f.id === p.id ? '#000' : '#666'}">
-                                        ${f.types.includes("Gourmet") ? "Gourmet" : "Base"}
+                                        ${getFormName(f.id)}
                                     </small>
                                 </div>
                             `).join('')}

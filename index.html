@@ -87,20 +87,16 @@
                 return formaCorrespondiente ? formaCorrespondiente.id : targetId;
             };
 
+            const getFormName = (formId) => {
+                if (!formId.includes('-')) return "Base"; 
+                const sufijo = formId.split('-')[1].toLowerCase(); 
+                if (sufijo === 'comida') return "Gourmet"; 
+                return sufijo.charAt(0).toUpperCase() + sufijo.slice(1);
+            };
+
             const formas = misPokes.filter(f => f.num === p.num);
             let selectorFormas = "";
-            
             if (formas.length > 1) {
-                const getFormName = (formId) => {
-                    if (!formId.includes('-')) return "Base"; 
-                    
-                    const sufijo = formId.split('-')[1].toLowerCase(); 
-                    
-                    if (sufijo === 'comida') return "Gourmet"; 
-                    
-                    return sufijo.charAt(0).toUpperCase() + sufijo.slice(1);
-                };
-
                 selectorFormas = `
                     <div class="seccion" style="text-align: center; background:rgba(0,0,0,0.05); padding:15px; border-radius:10px; margin-bottom:20px;">
                         <h3 style="margin: 0 0 15px 0; border-bottom:none; font-size: 1.1em; letter-spacing: 2px;">FORMAS</h3>
@@ -185,23 +181,37 @@
 
                     <div class="seccion">
                         <h3>Línea Evolutiva</h3>
-                        <div class="evo-container">
+                        <div class="evo-wrapper" style="display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                            
                             ${p.evolution.prevo ? `
                                 <div class="evo-unit" onclick="renderDetail('${getSmartId(p.evolution.prevo.id)}')">
                                     <img src="sprites/${getSmartId(p.evolution.prevo.id)}.png">
                                     <br><small>${p.evolution.prevo.method}</small>
-                                </div>` : ''}
+                                </div>
+                                <span style="font-size: 2em; color: #ccc;">➔</span>
+                            ` : ''}
                             
                             <div class="evo-unit active-evo">
                                 <img src="sprites/${p.id}.png">
                                 <br><small>Actual</small>
                             </div>
 
-                            ${p.evolution.evos.map(e => `
-                                <div class="evo-unit" onclick="renderDetail('${getSmartId(e.id)}')">
-                                    <img src="sprites/${getSmartId(e.id)}.png">
-                                    <br><small>${e.method}</small>
-                                </div>`).join('')}
+                            ${p.evolution.evos && p.evolution.evos.length > 0 ? `
+                                <span style="font-size: 2em; color: #ccc;">➔</span>
+                                <div class="evo-branch" style="display: flex; flex-direction: column; gap: 15px; border-left: 2px solid #eee; padding-left: 15px;">
+                                    ${p.evolution.evos.map(e => {
+                                        const evoData = misPokes.find(mp => mp.id === getSmartId(e.id));
+                                        return `
+                                        <div class="evo-unit" onclick="renderDetail('${evoData.id}')" style="display: flex; align-items: center; gap: 10px; text-align: left; background: rgba(0,0,0,0.02); padding: 8px 15px; border-radius: 50px; cursor:pointer;">
+                                            <img src="sprites/${evoData.id}.png" style="width: 50px; height: 50px; object-fit:contain;">
+                                            <div>
+                                                <strong style="display: block; font-size: 0.9em;">${evoData.name}</strong>
+                                                <small style="color: #666;">${e.method}</small>
+                                            </div>
+                                        </div>`;
+                                    }).join('')}
+                                </div>
+                            ` : ''}
                         </div>
                     </div>
 

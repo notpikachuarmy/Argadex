@@ -991,5 +991,564 @@ const misPokes = [
             egg: []
         }
     },
+    {
+        id: "14",
+        num: 14,
+        name: "Secgyem",
+        category: "Sectoide",
+        types: ["Psíquico"],
+        stats: { hp: 55, att: 45, def: 55, spA: 85, spD: 75, spe: 40 },
+        abilities: [
+            { type: "Habilidad 1", id: "TELEPATHY" },
+            { type: "Habilidad 2", id: "SYNCHRONIZE" },
+            { type: "Oculta", id: "ANALYTIC" }
+        ],
+        flavor: "Un espécimen alienígena que analiza las ondas cerebrales de su entorno. Se dice que llegó en una noche de tormenta eléctrica buscando fuentes de energía psíquica.",
+        credits: { design: "Rezatri", sprite: "Rezatri" },
+        evolution: {
+            prevo: null,
+            evos: [{ id: "15-jagara", name: "Hexgyem", method: "Movimiento tipo Siniestro" }]
+        },
+        moves: {
+            level: [
+                { lv: "1", id: "SCRATCH" }, { lv: "1", id: "HARDEN" }, { lv: "4", id: "CONFUSION" },
+                { lv: "8", id: "IMPRISON" }, { lv: "11", id: "PSYBEAM" }, { lv: "15", id: "AGILITY" },
+                { lv: "18", id: "PSYCHUP" }, { lv: "22", id: "MIRRORCOAT" }, { lv: "25", id: "CALMMIND" },
+                { lv: "29", id: "PSYCHIC" }, { lv: "32", id: "ALLYSWITCH" }, { lv: "36", id: "DARKPULSE" },
+                { lv: "40", id: "RECOVER" }, { lv: "43", id: "GUARDSPLIT" }, { lv: "43", id: "POWERSPLIT" }
+            ],
+            tutor: [
+                { id: "ALLYSWITCH" }, { id: "CALMMIND" }, { id: "CONFIDE" }, { id: "DOUBLETEAM" },
+                { id: "DREAMEATER" }, { id: "ECHOEDVOICE" }, { id: "ENDURE" }, { id: "FACADE" },
+                { id: "FLASH" }, { id: "FRUSTRATION" }, { id: "GRAVITY" }, { id: "HIDDENPOWER" },
+                { id: "LIGHTSCREEN" }, { id: "MAGICCOAT" }, { id: "MAGICALLEAF" }, { id: "METRONOME" },
+                { id: "MIMIC" }, { id: "PROTECT" }, { id: "PSYCHIC" }, { id: "PSYCHUP" },
+                { id: "PSYSHOCK" }, { id: "RAINDANCE" }, { id: "REFLECT" }, { id: "REST" },
+                { id: "RETURN" }, { id: "ROUND" }, { id: "SAFEGUARD" }, { id: "SECRETPOWER" },
+                { id: "SHADOWBALL" }, { id: "SKILLSWAP" }, { id: "SLEEPTALK" }, { id: "SNORE" },
+                { id: "SUBSTITUTE" }, { id: "SWAGGER" }, { id: "TELEKINESIS" }, { id: "THUNDERBOLT" },
+                { id: "THUNDERWAVE" }, { id: "TOXIC" }, { id: "TRICK" }, { id: "TRICKROOM" },
+                { id: "ZENHEADBUTT" }
+            ],
+            egg: []
+        }
+    },
+    {
+        id: "15",
+        num: 15,
+        name: "Hexgyem",
+        category: "Mentalista",
+        types: ["Psíquico", "Fantasma"],
+        stats: { hp: 75, att: 60, def: 75, spA: 125, spD: 95, spe: 55 },
+        abilities: [
+            { type: "Habilidad 1", id: "TELEPATHY" },
+            { type: "Habilidad 2", id: "SYNCHRONIZE" },
+            { type: "Oculta", id: "ANALYTIC" }
+        ],
+        flavor: "Al evolucionar, su cerebro se expande para procesar el miedo y la envidia ajena. Utiliza estas emociones negativas para potenciar sus ataques de energía oscura.",
+        credits: { design: "Rezatri", sprite: "Rezatri" },
+        evolution: {
+            prevo: { id: "14-jagara", name: "Secgyem", method: "Movimiento tipo Siniestro" },
+            evos: []
+        },
+        moves: {
+            level: [
+                { lv: "0", id: "SHADOWBALL" }, { lv: "1", id: "SHADOWBALL" }, { lv: "1", id: "DARKPULSE" },
+                { lv: "1", id: "SCRATCH" }, { lv: "1", id: "HARDEN" }, { lv: "1", id: "CONFUSION" },
+                { lv: "1", id: "IMPRISON" }, { lv: "4", id: "CONFUSION" }, { lv: "8", id: "IMPRISON" },
+                { lv: "11", id: "PSYBEAM" }, { lv: "15", id: "AGILITY" }, { lv: "18", id: "PSYCHUP" },
+                { lv: "22", id: "MIRRORCOAT" }, { lv: "25", id: "CALMMIND" }, { lv: "29", id: "PSYCHIC" },
+                { lv: "32", id: "ALLYSWITCH" }, { lv: "36", id: "DARKPULSE" }, { lv: "42", id: "RECOVER" },
+                { lv: "48", id: "NASTYPLOT" }, { lv: "54", id: "HYPERBEAM" }
+            ],
+            tutor: [
+                { id: "ALLYSWITCH" }, { id: "CALMMIND" }, { id: "CONFIDE" }, { id: "DARKPULSE" },
+                { id: "DOUBLETEAM" }, { id: "DREAMEATER" }, { id: "ECHOEDVOICE" }, { id: "ENDURE" },
+                { id: "FACADE" }, { id: "FLASH" }, { id: "FRUSTRATION" }, { id: "GIGAIMPACT" },
+                { id: "GRAVITY" }, { id: "HIDDENPOWER" }, { id: "HYPERBEAM" }, { id: "LIGHTSCREEN" },
+                { id: "MAGICCOAT" }, { id: "MAGICALLEAF" }, { id: "METRONOME" }, { id: "MIMIC" },
+                { id: "NASTYPLOT" }, { id: "PROTECT" }, { id: "PSYCHIC" }, { id: "PSYCHUP" },
+                { id: "PSYSHOCK" }, { id: "RAINDANCE" }, { id: "REFLECT" }, { id: "REST" },
+                { id: "RETURN" }, { id: "ROUND" }, { id: "SAFEGUARD" }, { id: "SECRETPOWER" },
+                { id: "SHADOWBALL" }, { id: "SKILLSWAP" }, { id: "SLEEPTALK" }, { id: "SNORE" },
+                { id: "SUBSTITUTE" }, { id: "SWAGGER" }, { id: "TELEKINESIS" }, { id: "THUNDERBOLT" },
+                { id: "THUNDERWAVE" }, { id: "TOXIC" }, { id: "TRICK" }, { id: "TRICKROOM" },
+                { id: "ZENHEADBUTT" }
+            ],
+            egg: []
+        }
+    },
+    {
+        id: "16",
+        num: 16,
+        name: "Regigold",
+        category: "Dorado",
+        types: ["Acero"],
+        stats: { hp: 80, att: 100, def: 200, spA: 50, spD: 100, spe: 50 },
+        abilities: [
+            { type: "Habilidad 1", id: "CLEARBODY" },
+            { type: "Oculta", id: "STURDY" }
+        ],
+        flavor: "Un Pokémon creado a partir de oro de una pureza imposible de encontrar en la naturaleza. Su cuerpo es tan pesado que deja huellas profundas incluso en roca sólida.",
+        credits: { design: "Rezatri", sprite: "Rezatri" },
+        evolution: {
+            prevo: null,
+            evos: []
+        },
+        moves: {
+            level: [
+                { lv: "1", id: "METALCLAW" }, { lv: "1", id: "COSMICPOWER" }, { lv: "1", id: "HARDEN" },
+                { lv: "6", id: "CURSE" }, { lv: "12", id: "ANCIENTPOWER" }, { lv: "18", id: "IRONHEAD" },
+                { lv: "24", id: "IRONDEFENSE" }, { lv: "30", id: "HEAVYSLAM" }, { lv: "36", id: "AMNESIA" },
+                { lv: "42", id: "FLASHCANNON" }, { lv: "48", id: "LOCKON" }, { lv: "54", id: "ZAPCANNON" },
+                { lv: "60", id: "HYPERBEAM" }
+            ],
+            tutor: [
+                { id: "AMNESIA" }, { id: "ATTRACT" }, { id: "BODYPRESS" }, { id: "BODYSLAM" },
+                { id: "BULKUP" }, { id: "CONFIDE" }, { id: "CURSE" }, { id: "DOUBLETEAM" },
+                { id: "EARTHQUAKE" }, { id: "ENDURE" }, { id: "EXPLOSION" }, { id: "FACADE" },
+                { id: "FLASHCANNON" }, { id: "FOCUSBLAST" }, { id: "FRUSTRATION" }, { id: "GIGAIMPACT" },
+                { id: "GYROBALL" }, { id: "HARDPRESS" }, { id: "HEAVYSLAM" }, { id: "HIDDENPOWER" },
+                { id: "HYPERBEAM" }, { id: "IRONDEFENSE" }, { id: "IRONHEAD" }, { id: "METALCLAW" },
+                { id: "PROTECT" }, { id: "REST" }, { id: "RETURN" }, { id: "ROCKPOLISH" },
+                { id: "ROCKSLIDE" }, { id: "ROUND" }, { id: "SLEEPTALK" }, { id: "SNORE" },
+                { id: "STEALTHROCK" }, { id: "STEELROLLER" }, { id: "SUBSTITUTE" }, { id: "SWAGGER" },
+                { id: "TERABLAST" }, { id: "THUNDERBOLT" }, { id: "TOXIC" }
+            ],
+            egg: []
+        }
+    },
+    {
+        id: "17",
+        num: 17,
+        name: "Regijewel",
+        category: "Joya",
+        types: ["Hada"],
+        stats: { hp: 80, att: 50, def: 100, spA: 100, spD: 200, spe: 50 },
+        abilities: [
+            { type: "Habilidad 1", id: "CLEARBODY" },
+            { type: "Oculta", id: "FILTER" }
+        ],
+        flavor: "Su cuerpo está compuesto por cristales preciosos formados bajo presiones extremas. Se dice que su brillo puede cegar a quien intente pulir su superficie.",
+        credits: { design: "Rezatri", sprite: "Rezatri" },
+        evolution: {
+            prevo: null,
+            evos: []
+        },
+        moves: {
+            level: [
+                { lv: "1", id: "CHARGEBEAM" }, { lv: "1", id: "COSMICPOWER" }, { lv: "1", id: "FAIRYWIND" },
+                { lv: "6", id: "AMNESIA" }, { lv: "12", id: "ANCIENTPOWER" }, { lv: "18", id: "DAZZLINGGLEAM" },
+                { lv: "24", id: "SAFEGUARD" }, { lv: "30", id: "POWERGEM" }, { lv: "36", id: "IRONDEFENSE" },
+                { lv: "42", id: "MOONBLAST" }, { lv: "48", id: "LOCKON" }, { lv: "54", id: "ZAPCANNON" },
+                { lv: "60", id: "HYPERBEAM" }
+            ],
+            tutor: [
+                { id: "ALLYSWITCH" }, { id: "AMNESIA" }, { id: "ATTRACT" }, { id: "CALMMIND" },
+                { id: "CONFIDE" }, { id: "COSMICPOWER" }, { id: "DAZZLINGGLEAM" }, { id: "DOUBLETEAM" },
+                { id: "ENDURE" }, { id: "FACADE" }, { id: "FLASH" }, { id: "FRUSTRATION" },
+                { id: "GIGAIMPACT" }, { id: "HELPINGHAND" }, { id: "HIDDENPOWER" }, { id: "HYPERBEAM" },
+                { id: "LIGHTSCREEN" }, { id: "MAGICCOAT" }, { id: "METRONOME" }, { id: "MISTYTERRAIN" },
+                { id: "PROTECT" }, { id: "PSYCHUP" }, { id: "REFLECT" }, { id: "REST" },
+                { id: "RETURN" }, { id: "ROUND" }, { id: "SAFEGUARD" }, { id: "SLEEPTALK" },
+                { id: "SNORE" }, { id: "SUBSTITUTE" }, { id: "SWAGGER" }, { id: "SWIFT" },
+                { id: "TERABLAST" }, { id: "THUNDERBOLT" }, { id: "TOXIC" }
+            ],
+            egg: []
+        }
+    },
+    {
+        id: "18",
+        num: 18,
+        name: "Regiturm",
+        category: "Cúrcuma",
+        types: ["Planta"],
+        stats: { hp: 80, att: 100, def: 100, spA: 100, spD: 100, spe: 100 },
+        abilities: [
+            { type: "Habilidad 1", id: "CLEARBODY" },
+            { type: "Oculta", id: "REGENERATOR" }
+        ],
+        flavor: "Se cree que fue esculpido a partir de raíces milenarias. Desprende un aroma intenso que tiene propiedades curativas para los Pokémon de tipo Planta de su alrededor.",
+        credits: { design: "Rezatri", sprite: "Rezatri" },
+        evolution: {
+            prevo: null,
+            evos: []
+        },
+        moves: {
+            level: [
+                { lv: "1", id: "ABSORB" }, { lv: "1", id: "COSMICPOWER" }, { lv: "1", id: "INGRAIN" },
+                { lv: "6", id: "SUBSTITUTE" }, { lv: "12", id: "ANCIENTPOWER" }, { lv: "18", id: "MAGICALLEAF" },
+                { lv: "24", id: "LEECHSEED" }, { lv: "30", id: "HORNLEECH" }, { lv: "36", id: "IRONDEFENSE" },
+                { lv: "42", id: "ENERGYBALL" }, { lv: "48", id: "LOCKON" }, { lv: "54", id: "ZAPCANNON" },
+                { lv: "60", id: "HYPERBEAM" }
+            ],
+            tutor: [
+                { id: "AMNESIA" }, { id: "ATTRACT" }, { id: "BULLETSEED" }, { id: "BULLDOZE" },
+                { id: "CONFIDE" }, { id: "CURSE" }, { id: "DOUBLETEAM" }, { id: "EARTHQUAKE" },
+                { id: "ENDURE" }, { id: "ENERGYBALL" }, { id: "FACADE" }, { id: "GIGADRAIN" },
+                { id: "GIGAIMPACT" }, { id: "GRASSKNOT" }, { id: "GRASSYGLIDE" }, { id: "GRASSYTERRAIN" },
+                { id: "HELPINGHAND" }, { id: "HIDDENPOWER" }, { id: "HYPERBEAM" }, { id: "IRONDEFENSE" },
+                { id: "LEAFSTORM" }, { id: "LEECHSEED" }, { id: "MAGICALLEAF" }, { id: "NATUREPOWER" },
+                { id: "PROTECT" }, { id: "REST" }, { id: "RETURN" }, { id: "ROUND" },
+                { id: "SEEDBOMB" }, { id: "SLEEPTALK" }, { id: "SNORE" }, { id: "SOLARBEAM" },
+                { id: "SOLARBLADE" }, { id: "STOMPINGTANTRUM" }, { id: "SUBSTITUTE" }, { id: "SWAGGER" },
+                { id: "TERABLAST" }, { id: "TOXIC" }, { id: "WORRYSEED" }
+            ],
+            egg: []
+        }
+    },
+    {
+        id: "19",
+        num: 19,
+        name: "Regiloon",
+        category: "Globo",
+        types: ["Volador"],
+        stats: { hp: 80, att: 100, def: 50, spA: 200, spD: 100, spe: 50 },
+        abilities: [
+            { type: "Habilidad 1", id: "UNBURDEN" },
+            { type: "Habilidad 2", id: "CLEARBODY" },
+            { type: "Oculta", id: "AERILATE" }
+        ],
+        flavor: "Se dice que Regigigas lo creó en un momento de aburrimiento extremo para entretener a un Pokémon que conoció. Aunque parece frágil, su cuerpo de gas comprimido es capaz de generar ráfagas de viento devastadoras.",
+        credits: { design: "Rezatri", sprite: "Rezatri" },
+        evolution: {
+            prevo: null,
+            evos: []
+        },
+        moves: {
+            level: [
+                { lv: "1", id: "POUND" }, { lv: "1", id: "GUST" }, { lv: "6", id: "CHARGE" },
+                { lv: "12", id: "AERIALACE" }, { lv: "18", id: "ANCIENTPOWER" }, { lv: "24", id: "SELFDESTRUCT" },
+                { lv: "30", id: "BOUNCE" }, { lv: "36", id: "AIRSLASH" }, { lv: "42", id: "LOCKON" },
+                { lv: "48", id: "ZAPCANNON" }, { lv: "54", id: "SKYATTACK" }, { lv: "60", id: "HYPERBEAM" },
+                { lv: "66", id: "EXPLOSION" }
+            ],
+            tutor: [
+                { id: "ACROBATICS" }, { id: "AERIALACE" }, { id: "AEROBLAST" }, { id: "AIRSLASH" },
+                { id: "ALLYSWITCH" }, { id: "AMNESIA" }, { id: "ATTRACT" }, { id: "BOUNCE" },
+                { id: "CONFIDE" }, { id: "DEFOG" }, { id: "DOUBLETEAM" }, { id: "ENDURE" },
+                { id: "EXPLOSION" }, { id: "FACADE" }, { id: "FLY" }, { id: "FRUSTRATION" },
+                { id: "GIGAIMPACT" }, { id: "GYROBALL" }, { id: "HELPINGHAND" }, { id: "HIDDENPOWER" },
+                { id: "HYPERBEAM" }, { id: "IRONDEFENSE" }, { id: "LIGHTSCREEN" }, { id: "PROTECT" },
+                { id: "RAINDANCE" }, { id: "REFLECT" }, { id: "REST" }, { id: "RETURN" },
+                { id: "ROOST" }, { id: "SAFEGUARD" }, { id: "SELFDESTRUCT" }, { id: "SLEEPTALK" },
+                { id: "SNORE" }, { id: "SUBSTITUTE" }, { id: "SUNNYDAY" }, { id: "SWAGGER" },
+                { id: "SWIFT" }, { id: "TAILWIND" }, { id: "THUNDERBOLT" }, { id: "THUNDERWAVE" },
+                { id: "TOXIC" }, { id: "UTURN" }
+            ],
+            egg: []
+        }
+    },
+    {
+        id: "20",
+        num: 20,
+        name: "Regisage",
+        category: "Rúnico",
+        types: ["Psíquico"],
+        stats: { hp: 80, att: 50, def: 100, spA: 100, spD: 200, spe: 50 },
+        abilities: [
+            { type: "Habilidad 1", id: "LEVITATE" },
+            { type: "Habilidad 2", id: "CLEARBODY" },
+            { type: "Oculta", id: "ANALYTIC" }
+        ],
+        flavor: "Creado por Regigigas tras descifrar el lenguaje de los Unown. Su cuerpo arde con la llama del conocimiento primordial y se dice que custodia los secretos del origen del mundo Pokémon.",
+        credits: { design: "Rezatri", sprite: "Rezatri" },
+        evolution: {
+            prevo: null,
+            evos: []
+        },
+        moves: {
+            level: [
+                { lv: "1", id: "POUND" }, { lv: "1", id: "CONFUSION" }, { lv: "6", id: "CHARGE" },
+                { lv: "12", id: "ASTONISH" }, { lv: "18", id: "ANCIENTPOWER" }, { lv: "24", id: "CALMMIND" },
+                { lv: "30", id: "PSYBEAM" }, { lv: "36", id: "COSMICPOWER" }, { lv: "42", id: "LOCKON" },
+                { lv: "48", id: "ZAPCANNON" }, { lv: "54", id: "PSYCHIC" }, { lv: "60", id: "HYPERBEAM" },
+                { lv: "66", id: "FUTURESIGHT" }
+            ],
+            tutor: [
+                { id: "ALLYSWITCH" }, { id: "AMNESIA" }, { id: "ATTRACT" }, { id: "CALMMIND" },
+                { id: "CONFIDE" }, { id: "DOUBLETEAM" }, { id: "DREAMEATER" }, { id: "ECHOEDVOICE" },
+                { id: "ENDURE" }, { id: "ENERGYBALL" }, { id: "EXPANDINGFORCE" }, { id: "FACADE" },
+                { id: "FLASH" }, { id: "FOCUSBLAST" }, { id: "FRUSTRATION" }, { id: "FUTURESIGHT" },
+                { id: "GIGAIMPACT" }, { id: "GRAVITY" }, { id: "HELPINGHAND" }, { id: "HIDDENPOWER" },
+                { id: "HYPERBEAM" }, { id: "IRONDEFENSE" }, { id: "LIGHTSCREEN" }, { id: "MAGICCOAT" },
+                { id: "MAGICALLEAF" }, { id: "METRONOME" }, { id: "MYSTICALFIRE" }, { id: "POWERGEM" },
+                { id: "PROTECT" }, { id: "PSYCHIC" }, { id: "PSYCHICNOISE" }, { id: "PSYCHUP" },
+                { id: "PSYSHOCK" }, { id: "RAINDANCE" }, { id: "REFLECT" }, { id: "REST" },
+                { id: "RETURN" }, { id: "SAFEGUARD" }, { id: "SHADOWBALL" }, { id: "SKILLSWAP" },
+                { id: "SLEEPTALK" }, { id: "SNORE" }, { id: "SUBSTITUTE" }, { id: "SUNNYDAY" },
+                { id: "SWAGGER" }, { id: "TELEKINESIS" }, { id: "THUNDERBOLT" }, { id: "THUNDERWAVE" },
+                { id: "TOXIC" }, { id: "TRICKROOM" }, { id: "ZENHEADBUTT" }
+            ],
+            egg: []
+        }
+    },
+    {
+        id: "21",
+        num: 21,
+        name: "Spheal",
+        category: "Aplauso",
+        types: ["Hielo", "Agua"],
+        stats: { hp: 70, att: 40, def: 50, spA: 25, spD: 55, spe: 50 },
+        abilities: [
+            { type: "Habilidad 1", id: "THICKFAT" },
+            { type: "Habilidad 2", id: "ICEBODY" },
+            { type: "Oculta", id: "OBLIVIOUS" }
+        ],
+        flavor: "Está cubierto por completo con un grueso pelaje. Gracias a él, nunca siente frío: ni cuando rueda sobre placas de hielo ni cuando bucea en el mar.",
+        credits: { design: "GameFreak", sprite: "GameFreak" },
+        evolution: {
+            prevo: null,
+            evos: [{ id: "22", name: "Sealeo", method: "Nivel 32" }]
+        },
+        moves: {
+            level: [
+                { lv: "1", id: "ROLLOUT" }, { lv: "1", id: "DEFENSECURL" }, { lv: "4", id: "GROWL" },
+                { lv: "8", id: "WATERGUN" }, { lv: "12", id: "POWDERSNOW" }, { lv: "16", id: "REST" },
+                { lv: "20", id: "SNORE" }, { lv: "24", id: "BRINE" }, { lv: "28", id: "AURORABEAM" },
+                { lv: "33", id: "ENCORE" }, { lv: "36", id: "BODYSLAM" }, { lv: "40", id: "SURF" },
+                { lv: "44", id: "BLIZZARD" }, { lv: "48", id: "HAIL" }, { lv: "52", id: "SHEERCOLD" }
+            ],
+            tutor: [
+                { id: "AQUATAIL" }, { id: "ATTRACT" }, { id: "BLIZZARD" }, { id: "BODYSLAM" },
+                { id: "BRINE" }, { id: "BULLDOZE" }, { id: "CAPTIVATE" }, { id: "CONFIDE" },
+                { id: "DEFENSECURL" }, { id: "DIVE" }, { id: "DOUBLEEDGE" }, { id: "DOUBLETEAM" },
+                { id: "EARTHQUAKE" }, { id: "ECHOEDVOICE" }, { id: "ENCORE" }, { id: "ENDURE" },
+                { id: "FACADE" }, { id: "FROSTBREATH" }, { id: "FRUSTRATION" }, { id: "HAIL" },
+                { id: "HEADBUTT" }, { id: "HIDDENPOWER" }, { id: "ICEBEAM" }, { id: "ICYWIND" },
+                { id: "IRONTAIL" }, { id: "MIMIC" }, { id: "MUDSLAP" }, { id: "NATURALGIFT" },
+                { id: "PROTECT" }, { id: "RAINDANCE" }, { id: "REST" }, { id: "RETURN" },
+                { id: "ROCKSLIDE" }, { id: "ROCKSMASH" }, { id: "ROCKTOMB" }, { id: "ROLLOUT" },
+                { id: "ROUND" }, { id: "SECRETPOWER" }, { id: "SIGNALBEAM" }, { id: "SLEEPTALK" },
+                { id: "SNORE" }, { id: "STEELROLLER" }, { id: "STRENGTH" }, { id: "SUBSTITUTE" },
+                { id: "SUPERFANG" }, { id: "SURF" }, { id: "SWAGGER" }, { id: "WATERFALL" },
+                { id: "WATERPULSE" }, { id: "WHIRLPOOL" }
+            ],
+            egg: [
+                { id: "AQUARING" }, { id: "BELLYDRUM" }, { id: "CURSE" }, { id: "FISSURE" },
+                { id: "ROLLOUT" }, { id: "SPITUP" }, { id: "STOCKPILE" }, { id: "SWALLOW" },
+                { id: "WATERPULSE" }, { id: "YAWN" }
+            ]
+        }
+    },
+    {
+        id: "21-jagara",
+        num: 21,
+        name: "Spheal",
+        category: "Aplauso",
+        types: ["Agua", "Lucha"],
+        stats: { hp: 60, att: 70, def: 50, spA: 45, spD: 50, spe: 50 },
+        abilities: [
+            { type: "Habilidad 1", id: "INNERFOCUS" },
+            { type: "Habilidad 2", id: "STEADFAST" },
+            { type: "Oculta", id: "SHARPNESS" }
+        ],
+        flavor: "A diferencia de otros Spheal, estos pasan el día golpeando sus aletas contra las rocas costeras. Aunque su cuerpo es redondo, sus golpes son secos y precisos como los de un karateka.",
+        credits: { design: "Rezatri", sprite: "Rezatri" },
+        evolution: {
+            prevo: null,
+            evos: [{ id: "22-jagara", name: "Sealeo", method: "Nivel 32" }]
+        },
+        moves: {
+            level: [
+                { lv: "1", id: "POUND" }, { lv: "1", id: "WATERGUN" }, { lv: "4", id: "LEER" },
+                { lv: "8", id: "ROCKSMASH" }, { lv: "12", id: "AQUAJET" }, { lv: "16", id: "DOUBLEKICK" },
+                { lv: "20", id: "ICEBALL" }, { lv: "24", id: "BRINE" }, { lv: "28", id: "BULKUP" },
+                { lv: "32", id: "BODYSLAM" }, { lv: "36", id: "LIQUIDATION" }
+            ],
+            tutor: [
+                { id: "AQUAJET" }, { id: "AQUATAIL" }, { id: "ATTRACT" }, { id: "BODYSLAM" },
+                { id: "BRINE" }, { id: "BULKUP" }, { id: "COACHING" }, { id: "CONFIDE" },
+                { id: "DOUBLEKICK" }, { id: "DOUBLETEAM" }, { id: "DRAINPUNCH" }, { id: "ENDURE" },
+                { id: "FACADE" }, { id: "FOCUSBLAST" }, { id: "FRUSTRATION" }, { id: "HELPINGHAND" },
+                { id: "HIDDENPOWER" }, { id: "ICEPUNCH" }, { id: "ICYWIND" }, { id: "IRONDEFENSE" },
+                { id: "LIQUIDATION" }, { id: "LOWKICK" }, { id: "PROTECT" }, { id: "REST" },
+                { id: "RETURN" }, { id: "ROCKSMASH" }, { id: "ROUND" }, { id: "SLEEPTALK" },
+                { id: "SNORE" }, { id: "SUBSTITUTE" }, { id: "SUPERPOWER" }, { id: "SURF" },
+                { id: "SWAGGER" }, { id: "WATERPLEDGE" }, { id: "WATERPULSE" }, { id: "WHIRLPOOL" }
+            ],
+            egg: []
+        }
+    },
+    {
+        id: "22",
+        num: 22,
+        name: "Sealeo",
+        category: "Rodabola",
+        types: ["Hielo", "Agua"],
+        stats: { hp: 90, att: 60, def: 70, spA: 45, spD: 75, spe: 70 },
+        abilities: [
+            { type: "Habilidad 1", id: "THICKFAT" },
+            { type: "Habilidad 2", id: "ICEBODY" },
+            { type: "Oculta", id: "OBLIVIOUS" }
+        ],
+        flavor: "Sealeo vive en manadas sobre placas de hielo. Puede romper el hielo usando sus potentes aletas y se zambulle en el mar cinco veces al día para pescar.",
+        credits: { design: "GameFreak", sprite: "GameFreak" },
+        evolution: {
+            prevo: { id: "21", name: "Spheal", method: "Nivel 32" },
+            evos: [{ id: "23", name: "Walrein", method: "Nivel 44" }]
+        },
+        moves: {
+            level: [
+                { lv: "1", id: "SWAGGER" }, { lv: "1", id: "ROLLOUT" }, { lv: "1", id: "DEFENSECURL" },
+                { lv: "1", id: "GROWL" }, { lv: "1", id: "WATERGUN" }, { lv: "12", id: "POWDERSNOW" },
+                { lv: "16", id: "REST" }, { lv: "20", id: "SNORE" }, { lv: "24", id: "BRINE" },
+                { lv: "28", id: "AURORABEAM" }, { lv: "35", id: "ENCORE" }, { lv: "40", id: "BODYSLAM" },
+                { lv: "46", id: "SURF" }, { lv: "52", id: "BLIZZARD" }, { lv: "58", id: "HAIL" },
+                { lv: "64", id: "SHEERCOLD" }
+            ],
+            tutor: [
+                { id: "AQUATAIL" }, { id: "ATTRACT" }, { id: "BLIZZARD" }, { id: "BODYSLAM" },
+                { id: "BRINE" }, { id: "BULLDOZE" }, { id: "CAPTIVATE" }, { id: "CONFIDE" },
+                { id: "DEFENSECURL" }, { id: "DIVE" }, { id: "DOUBLEEDGE" }, { id: "DOUBLETEAM" },
+                { id: "EARTHQUAKE" }, { id: "ECHOEDVOICE" }, { id: "ENCORE" }, { id: "ENDURE" },
+                { id: "FACADE" }, { id: "FROSTBREATH" }, { id: "FRUSTRATION" }, { id: "HAIL" },
+                { id: "HEADBUTT" }, { id: "HIDDENPOWER" }, { id: "ICEBEAM" }, { id: "ICICLESPEAR" },
+                { id: "ICYWIND" }, { id: "IRONTAIL" }, { id: "MIMIC" }, { id: "MUDSLAP" },
+                { id: "NATURALGIFT" }, { id: "PROTECT" }, { id: "RAINDANCE" }, { id: "REST" },
+                { id: "RETURN" }, { id: "ROAR" }, { id: "ROCKSLIDE" }, { id: "ROCKSMASH" },
+                { id: "ROCKTOMB" }, { id: "ROLLOUT" }, { id: "ROUND" }, { id: "SECRETPOWER" },
+                { id: "SIGNALBEAM" }, { id: "SLEEPTALK" }, { id: "SNORE" }, { id: "STEELROLLER" },
+                { id: "STRENGTH" }, { id: "SUBSTITUTE" }, { id: "SUPERFANG" }, { id: "SURF" },
+                { id: "SWAGGER" }, { id: "WATERFALL" }, { id: "WATERPULSE" }, { id: "WHIRLPOOL" }
+            ],
+            egg: []
+        }
+    },
+    {
+        id: "22-jagara",
+        num: 22,
+        name: "Sealeo",
+        category: "Rodabola",
+        types: ["Agua", "Lucha"],
+        stats: { hp: 80, att: 90, def: 70, spA: 60, spD: 70, spe: 65 },
+        abilities: [
+            { type: "Habilidad 1", id: "INNERFOCUS" },
+            { type: "Habilidad 2", id: "STEADFAST" },
+            { type: "Oculta", id: "SHARPNESS" }
+        ],
+        flavor: "Su entrenamiento se vuelve más severo, llegando a partir carámbanos de hielo con el canto de sus aletas. Se dice que buscan las corrientes más fuertes para perfeccionar su equilibrio y fuerza.",
+        credits: { design: "Rezatri", sprite: "Rezatri" },
+        evolution: {
+            prevo: { id: "21-jagara", name: "Spheal", method: "Nivel 32" },
+            evos: [{ id: "24", name: "Zantoseal", method: "Nivel 44" }]
+        },
+        moves: {
+            level: [
+                { lv: "1", id: "POUND" }, { lv: "1", id: "WATERGUN" }, { lv: "1", id: "LEER" },
+                { lv: "1", id: "ROCKSMASH" }, { lv: "12", id: "AQUAJET" }, { lv: "16", id: "DOUBLEKICK" },
+                { lv: "20", id: "ICEBALL" }, { lv: "26", id: "BRINE" }, { lv: "31", id: "BULKUP" },
+                { lv: "38", id: "BODYSLAM" }, { lv: "44", id: "LIQUIDATION" }
+            ],
+            tutor: [
+                { id: "AQUACUTTER" }, { id: "AQUAJET" }, { id: "AQUATAIL" }, { id: "ATTRACT" },
+                { id: "BODYSLAM" }, { id: "BRINE" }, { id: "BULKUP" }, { id: "COACHING" },
+                { id: "CONFIDE" }, { id: "DOUBLEKICK" }, { id: "DOUBLETEAM" }, { id: "DRAINPUNCH" },
+                { id: "ENDURE" }, { id: "FACADE" }, { id: "FOCUSBLAST" }, { id: "FRUSTRATION" },
+                { id: "HELPINGHAND" }, { id: "HIDDENPOWER" }, { id: "ICEPUNCH" }, { id: "ICYWIND" },
+                { id: "IRONDEFENSE" }, { id: "LIQUIDATION" }, { id: "LOWKICK" }, { id: "PROTECT" },
+                { id: "REST" }, { id: "RETURN" }, { id: "ROCKSMASH" }, { id: "ROUND" },
+                { id: "SLEEPTALK" }, { id: "SNORE" }, { id: "SUBSTITUTE" }, { id: "SUPERPOWER" },
+                { id: "SURF" }, { id: "SWAGGER" }, { id: "WATERPLEDGE" }, { id: "WATERPULSE" },
+                { id: "WHIRLPOOL" }, { id: "ZENHEADBUTT" }
+            ],
+            egg: []
+        }
+    },
+    {
+        id: "23",
+        num: 23,
+        name: "Walrein",
+        category: "Rompehielo",
+        types: ["Hielo", "Agua"],
+        stats: { hp: 110, att: 80, def: 90, spA: 65, spD: 95, spe: 90 },
+        abilities: [
+            { type: "Habilidad 1", id: "THICKFAT" },
+            { type: "Habilidad 2", id: "ICEBODY" },
+            { type: "Oculta", id: "OBLIVIOUS" }
+        ],
+        flavor: "Para proteger a su manada, el líder luchará hasta el final contra todo lo que invada su territorio. En el transcurso del combate puede perder los colmillos.",
+        credits: { design: "GameFreak", sprite: "GameFreak" },
+        evolution: {
+            prevo: { id: "22", name: "Sealeo", method: "Nivel 44" },
+            evos: []
+        },
+        moves: {
+            level: [
+                { lv: "1", id: "SWAGGER" }, { lv: "1", id: "CRUNCH" }, { lv: "1", id: "ICEFANG" },
+                { lv: "1", id: "ROLLOUT" }, { lv: "1", id: "DEFENSECURL" }, { lv: "1", id: "GROWL" },
+                { lv: "1", id: "WATERGUN" }, { lv: "12", id: "POWDERSNOW" }, { lv: "16", id: "REST" },
+                { lv: "20", id: "SNORE" }, { lv: "24", id: "BRINE" }, { lv: "28", id: "AURORABEAM" },
+                { lv: "35", id: "ENCORE" }, { lv: "40", id: "BODYSLAM" }, { lv: "48", id: "SURF" },
+                { lv: "56", id: "BLIZZARD" }, { lv: "64", id: "HAIL" }, { lv: "72", id: "SHEERCOLD" }
+            ],
+            tutor: [
+                { id: "AQUATAIL" }, { id: "ATTRACT" }, { id: "AVALANCHE" }, { id: "BLIZZARD" },
+                { id: "BLOCK" }, { id: "BODYPRESS" }, { id: "BODYSLAM" }, { id: "BRINE" },
+                { id: "BULLDOZE" }, { id: "CAPTIVATE" }, { id: "CONFIDE" }, { id: "CRUNCH" },
+                { id: "DEFENSECURL" }, { id: "DIVE" }, { id: "DOUBLEEDGE" }, { id: "DOUBLETEAM" },
+                { id: "EARTHQUAKE" }, { id: "ECHOEDVOICE" }, { id: "ENCORE" }, { id: "ENDURE" },
+                { id: "FACADE" }, { id: "FROSTBREATH" }, { id: "FRUSTRATION" }, { id: "FURYCUTTER" },
+                { id: "GIGAIMPACT" }, { id: "HAIL" }, { id: "HEADBUTT" }, { id: "HEAVYSLAM" },
+                { id: "HIDDENPOWER" }, { id: "HYDROPUMP" }, { id: "HYPERBEAM" }, { id: "ICEBEAM" },
+                { id: "ICEFANG" }, { id: "ICICLESPEAR" }, { id: "ICYWIND" }, { id: "IRONHEAD" },
+                { id: "IRONTAIL" }, { id: "LIQUIDATION" }, { id: "MIMIC" }, { id: "MUDSLAP" },
+                { id: "NATURALGIFT" }, { id: "PROTECT" }, { id: "RAINDANCE" }, { id: "REST" },
+                { id: "RETURN" }, { id: "ROAR" }, { id: "ROCKSLIDE" }, { id: "ROCKSMASH" },
+                { id: "ROCKTOMB" }, { id: "ROLLOUT" }, { id: "ROUND" }, { id: "SECRETPOWER" },
+                { id: "SIGNALBEAM" }, { id: "SLEEPTALK" }, { id: "SNORE" }, { id: "STEELROLLER" },
+                { id: "STOMPINGTANTRUM" }, { id: "STRENGTH" }, { id: "SUBSTITUTE" }, { id: "SUPERFANG" },
+                { id: "SURF" }, { id: "SWAGGER" }, { id: "SWORDSDANCE" }, { id: "WATERFALL" },
+                { id: "WATERPULSE" }, { id: "WHIRLPOOL" }
+            ],
+            egg: []
+        }
+    },
+    {
+        id: "24",
+        num: 24,
+        name: "Zantoseal",
+        category: "Filo Marino",
+        types: ["Agua", "Lucha"],
+        stats: { hp: 95, att: 125, def: 90, spA: 60, spD: 90, spe: 70 },
+        abilities: [
+            { type: "Habilidad 1", id: "INNERFOCUS" },
+            { type: "Habilidad 2", id: "STEADFAST" },
+            { type: "Oculta", id: "SHARPNESS" }
+        ],
+        flavor: "Ha convertido su propio cuerpo en un arma. Practica sus cortes bajo cascadas congeladas para mejorar su precisión. Se dice que sus aletas pueden rebanar el acero.",
+        credits: { design: "Rezatri", sprite: "Rezatri" },
+        evolution: {
+            prevo: { id: "22-jagara", name: "Sealeo", method: "Nivel 44" },
+            evos: []
+        },
+        moves: {
+            level: [
+                { lv: "1", id: "POUND" }, { lv: "1", id: "WATERGUN" }, { lv: "1", id: "LEER" },
+                { lv: "1", id: "ROCKSMASH" }, { lv: "12", id: "AQUAJET" }, { lv: "16", id: "DOUBLEKICK" },
+                { lv: "20", id: "ICEBALL" }, { lv: "26", id: "BRINE" }, { lv: "31", id: "BULKUP" },
+                { lv: "38", id: "NIGHTSLASH" }, { lv: "44", id: "LIQUIDATION" }, { lv: "52", id: "CLOSECOMBAT" },
+                { lv: "60", id: "SACREDSWORD" }
+            ],
+            tutor: [
+                { id: "AQUACUTTER" }, { id: "AQUAJET" }, { id: "AQUATAIL" }, { id: "ATTRACT" },
+                { id: "BODYSLAM" }, { id: "BRINE" }, { id: "BRICKBREAK" }, { id: "BULKUP" },
+                { id: "CLOSECOMBAT" }, { id: "COACHING" }, { id: "CONFIDE" }, { id: "CUT" },
+                { id: "DETECT" }, { id: "DOUBLEEDGE" }, { id: "DOUBLETEAM" }, { id: "DRAINPUNCH" },
+                { id: "ENDURE" }, { id: "FACADE" }, { id: "FALSESWIPE" }, { id: "FOCUSBLAST" },
+                { id: "FOCUSPUNCH" }, { id: "FRUSTRATION" }, { id: "GIGAIMPACT" }, { id: "HELPINGHAND" },
+                { id: "HIDDENPOWER" }, { id: "HYPERBEAM" }, { id: "ICEPUNCH" }, { id: "ICYWIND" },
+                { id: "IRONDEFENSE" }, { id: "LIQUIDATION" }, { id: "LOWKICK" }, { id: "LOWSWEEP" },
+                { id: "NIGHTSLASH" }, { id: "POISONJAB" }, { id: "PROTECT" }, { id: "PSYCHOCUT" },
+                { id: "RAINDANCE" }, { id: "REST" }, { id: "RETURN" }, { id: "REVENGE" },
+                { id: "REVERSAL" }, { id: "ROCKSMASH" }, { id: "ROUND" }, { id: "SLEEPTALK" },
+                { id: "SNORE" }, { id: "STRENGTH" }, { id: "SUBSTITUTE" }, { id: "SUPERPOWER" },
+                { id: "SURF" }, { id: "SWAGGER" }, { id: "SWORDSDANCE" }, { id: "THROATCHOP" },
+                { id: "WATERPLEDGE" }, { id: "WATERPULSE" }, { id: "WATERFALL" }, { id: "WHIRLPOOL" },
+                { id: "XSCISSOR" }, { id: "ZENHEADBUTT" }
+            ],
+            egg: []
+        }
+    },
 ];
 

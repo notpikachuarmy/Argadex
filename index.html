@@ -22,8 +22,8 @@
 
         async function initApp() {
             // ¡PON TUS LINKS CSV DE GOOGLE SHEETS AQUÍ!
-            const urlHab = "TU_ENLACE_CSV_HABILIDADES_AQUI";
-            const urlMov = "TU_ENLACE_CSV_MOVIMIENTOS_AQUI";
+            const urlHab = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTqOAEkDEGylIHEmPV9zLCNhAA91W_V3pevcjDGxGqjtoIsSw1M0uD0Ya4c-OyWz9PChbcJ4HHP6rB-/pub?output=csv";
+            const urlMov = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSI6To38jAVH_zsa4qtGf0k1ZHhlwtqWmdBcgoYwBe4DKS6DbeNa0iWT5gljWJsSIR5CZJjKmqDIuyP/pub?output=csv";
 
             try {
                 const [resH, resM] = await Promise.all([fetch(urlHab), fetch(urlMov)]);

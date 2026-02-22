@@ -76,21 +76,34 @@
             const p = misPokes.find(poke => poke.id === id);
             const container = document.getElementById('app');
 
-            // --- LÓGICA DE FORMAS ---
+            // --- LÓGICA DE NAVEGACIÓN INTELIGENTE ---
+            const getSmartId = (targetId) => {
+                const targetBase = misPokes.find(f => f.id === targetId);
+                if (!targetBase) return targetId;
+                const sufijo = p.id.includes('-') ? p.id.split('-')[1] : null;
+                if (!sufijo) return targetId;
+                const formaCorrespondiente = misPokes.find(f => f.num === targetBase.num && f.id.endsWith('-' + sufijo));
+                return formaCorrespondiente ? formaCorrespondiente.id : targetId;
+            };
+
+            // --- SECCIÓN DE FORMAS CENTRADA ---
             const formas = misPokes.filter(f => f.num === p.num);
             let selectorFormas = "";
             if (formas.length > 1) {
-                selectorFormas = `<div class="evo-container" style="background:rgba(0,0,0,0.05); padding:10px; border-radius:10px; margin-bottom:15px;">
-                    <p style="margin-bottom:10px; font-weight:bold;">Cambiar Forma:</p>
-                    <div style="display:flex; justify-content:center; gap:10px;">
-                        ${formas.map(f => `
-                            <div class="evo-unit ${f.id === p.id ? 'active-evo' : ''}" onclick="renderDetail('${f.id}')" style="cursor:pointer">
-                                <img src="sprites/${f.id}.png" style="width:50px">
-                                <br><small>${f.types.includes("Gourmet") ? "Gourmet" : "Base"}</small>
-                            </div>
-                        `).join('')}
-                    </div>
-                </div>`;
+                selectorFormas = `
+                    <div class="seccion" style="text-align: center; background:rgba(0,0,0,0.05); padding:15px; border-radius:10px; margin-bottom:20px;">
+                        <h3 style="margin: 0 0 15px 0; border-bottom:none; font-size: 1.1em; letter-spacing: 2px;">FORMAS</h3>
+                        <div style="display:flex; justify-content:center; gap:30px;">
+                            ${formas.map(f => `
+                                <div class="evo-unit ${f.id === p.id ? 'active-evo' : ''}" onclick="renderDetail('${f.id}')" style="cursor:pointer">
+                                    <img src="sprites/${f.id}.png" style="width:60px; height:60px; object-fit:contain;">
+                                    <br><small style="font-weight:bold; color:${f.id === p.id ? '#000' : '#666'}">
+                                        ${f.types.includes("Gourmet") ? "Gourmet" : "Base"}
+                                    </small>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>`;
             }
 
             const buildTable = (list, hideLv = false) => {
@@ -140,7 +153,9 @@
                         </div>
                     </div>
 
-                    ${selectorFormas} <div class="secciones-grid">
+                    ${selectorFormas}
+
+                    <div class="secciones-grid">
                         <div class="seccion">
                             <h3>Estadísticas Base</h3>
                             ${Object.entries(p.stats).map(([k,v]) => `
@@ -160,9 +175,22 @@
                     <div class="seccion">
                         <h3>Línea Evolutiva</h3>
                         <div class="evo-container">
-                            ${p.evolution.prevo ? `<div class="evo-unit" onclick="renderDetail('${p.evolution.prevo.id}')"><img src="sprites/${p.evolution.prevo.id}.png"><br><small>${p.evolution.prevo.method}</small></div>` : ''}
-                            <div class="evo-unit active-evo"><img src="sprites/${p.id}.png"><br><small>Actual</small></div>
-                            ${p.evolution.evos.map(e => `<div class="evo-unit" onclick="renderDetail('${e.id}')"><img src="sprites/${e.id}.png"><br><small>${e.method}</small></div>`).join('')}
+                            ${p.evolution.prevo ? `
+                                <div class="evo-unit" onclick="renderDetail('${getSmartId(p.evolution.prevo.id)}')">
+                                    <img src="sprites/${getSmartId(p.evolution.prevo.id)}.png">
+                                    <br><small>${p.evolution.prevo.method}</small>
+                                </div>` : ''}
+                            
+                            <div class="evo-unit active-evo">
+                                <img src="sprites/${p.id}.png">
+                                <br><small>Actual</small>
+                            </div>
+
+                            ${p.evolution.evos.map(e => `
+                                <div class="evo-unit" onclick="renderDetail('${getSmartId(e.id)}')">
+                                    <img src="sprites/${getSmartId(e.id)}.png">
+                                    <br><small>${e.method}</small>
+                                </div>`).join('')}
                         </div>
                     </div>
 

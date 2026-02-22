@@ -361,5 +361,133 @@ const misPokes = [
             egg: []
         }
     },
+    {
+        id: "4",
+        num: 4,
+        name: "Sisagua",
+        category: "Melodía",
+        types: ["Agua"],
+        stats: { hp: 50, att: 44, def: 50, spA: 65, spD: 62, spe: 55 },
+        abilities: [
+            { type: "Habilidad 1", id: "TORRENT" },
+            { type: "Habilidad 2", id: "DAZZLING" },
+            { type: "Oculta", id: "LIQUIDVOICE" }
+        ],
+        flavor: "Su cola emite un sonido suave cuando el viento sopla a través de ella. Se dice que su música puede calmar hasta el mar más bravo.",
+        credits: { design: "Rezatri", sprite: "Rezatri" },
+        evolution: {
+            prevo: null,
+            evos: [{ id: "5", name: "Serenaja", method: "Lv. 16" }]
+        },
+        moves: {
+            level: [
+                { lv: "1", id: "POUND" },
+                { lv: "1", id: "GROWL" },
+                { lv: "6", id: "WATERGUN" },
+                { lv: "9", id: "SING" },
+                { lv: "12", id: "DISARMINGVOICE" },
+                { lv: "15", id: "WATERPULSE" },
+                { lv: "18", id: "CONFUSERAY" },
+                { lv: "21", id: "AQUARING" }
+            ],
+            tutor: [
+                { id: "ATTRACT" }, { id: "CALMMIND" }, { id: "CHARM" }, { id: "CONFIDE" }, 
+                { id: "DAZZLINGGLEAM" }, { id: "DISARMINGVOICE" }, { id: "DOUBLETEAM" }, { id: "DRAININGKISS" }, 
+                { id: "ECHOEDVOICE" }, { id: "ENDURE" }, { id: "FACADE" }, { id: "HELPINGHAND" }, 
+                { id: "HYPERVOICE" }, { id: "ICYWIND" }, { id: "LIGHTSCREEN" }, { id: "LIQUIDATION" }, 
+                { id: "PROTECT" }, { id: "RAINDANCE" }, { id: "REST" }, { id: "ROUND" }, 
+                { id: "SAFEGUARD" }, { id: "SLEEPTALK" }, { id: "SNORE" }, { id: "SUBSTITUTE" }, 
+                { id: "SURF" }, { id: "SWAGGER" }, { id: "WATERFALL" }, { id: "WATERPULSE" }
+            ],
+            egg: []
+        }
+    },
+    {
+        id: "5",
+        num: 5,
+        name: "Serenaja",
+        category: "Coralino",
+        types: ["Agua", "Hada"],
+        stats: { hp: 65, att: 54, def: 65, spA: 85, spD: 82, spe: 74 },
+        abilities: [
+            { type: "Habilidad 1", id: "TORRENT" },
+            { type: "Habilidad 2", id: "DAZZLING" },
+            { type: "Oculta", id: "LIQUIDVOICE" }
+        ],
+        flavor: "Los corales de su cuerpo actúan como cámaras de resonancia. Su canto es tan perfecto que otros Pokémon se reúnen a su alrededor solo para escucharlo.",
+        credits: { design: "Rezatri", sprite: "Rezatri" },
+        evolution: {
+            prevo: { id: "4", name: "Sisagua", method: "Lv. 16" },
+            evos: [{ id: "6", name: "Sinfobra", method: "Lv. 36" }]
+        },
+        moves: {
+            level: [
+                { lv: "1", id: "POUND" },
+                { lv: "1", id: "GROWL" },
+                { lv: "1", id: "WATERGUN" },
+                { lv: "1", id: "SING" },
+                { lv: "17", id: "DRAININGKISS" },
+                { lv: "22", id: "BUBBLEBEAM" },
+                { lv: "28", id: "HYPERVOICE" },
+                { lv: "32", id: "SAFEGUARD" },
+                { lv: "38", id: "MOONBLAST" }
+            ],
+            tutor: [
+                { id: "ATTRACT" }, { id: "CALMMIND" }, { id: "CHARM" }, { id: "CONFIDE" }, 
+                { id: "DAZZLINGGLEAM" }, { id: "DISARMINGVOICE" }, { id: "DOUBLETEAM" }, { id: "DRAININGKISS" }, 
+                { id: "ECHOEDVOICE" }, { id: "ENDURE" }, { id: "FACADE" }, { id: "HELPINGHAND" }, 
+                { id: "HYPERVOICE" }, { id: "ICEBEAM" }, { id: "ICYWIND" }, { id: "LIGHTSCREEN" }, 
+                { id: "LIQUIDATION" }, { id: "PROTECT" }, { id: "RAINDANCE" }, { id: "REST" }, 
+                { id: "ROUND" }, { id: "SAFEGUARD" }, { id: "SLEEPTALK" }, { id: "SNORE" }, 
+                { id: "SUBSTITUTE" }, { id: "SURF" }, { id: "SWAGGER" }, { id: "WATERFALL" }, 
+                { id: "WATERPULSE" }
+            ],
+            egg: []
+        }
+    },
+    {
+        id: "6",
+        num: 6,
+        name: "Sinfobra",
+        category: "Encantador",
+        types: ["Agua", "Hada"],
+        stats: { hp: 80, att: 60, def: 75, spA: 116, spD: 114, spe: 85 },
+        abilities: [
+            { type: "Habilidad 1", id: "TORRENT" },
+            { type: "Habilidad 2", id: "DAZZLING" },
+            { type: "Oculta", id: "LIQUIDVOICE" }
+        ],
+        flavor: "Su anatomía coralina funciona como un complejo instrumento de viento. Al erguirse, emite una frecuencia mística que apacigua el espíritu de quienes la rodean.",
+        credits: { design: "Rezatri", sprite: "Rezatri" },
+        evolution: {
+            prevo: { id: "5", name: "Serenaja", method: "Lv. 36" },
+            evos: []
+        },
+        moves: {
+            level: [
+                { lv: "1", id: "PERISHSONG" },
+                { lv: "1", id: "SPARKLINGARIA" },
+                { lv: "1", id: "MOONBLAST" },
+                { lv: "1", id: "CALMMIND" },
+                { lv: "1", id: "CAPTIVATE" },
+                { lv: "42", id: "HYDROPUMP" },
+                { lv: "48", id: "ALLURINGVOICE" },
+                { lv: "55", id: "DAZZLINGGLEAM" },
+                { lv: "62", id: "HYDROSTEAM" }
+            ],
+            tutor: [
+                { id: "ATTRACT" }, { id: "CALMMIND" }, { id: "CHARM" }, { id: "CONFIDE" }, 
+                { id: "DAZZLINGGLEAM" }, { id: "DISARMINGVOICE" }, { id: "DOUBLETEAM" }, { id: "DRAININGKISS" }, 
+                { id: "ECHOEDVOICE" }, { id: "ENDURE" }, { id: "FACADE" }, { id: "GIGADRAIN" }, 
+                { id: "GIGAIMPACT" }, { id: "HELPINGHAND" }, { id: "HYPERBEAM" }, { id: "HYPERVOICE" }, 
+                { id: "ICEBEAM" }, { id: "ICYWIND" }, { id: "LIGHTSCREEN" }, { id: "LIQUIDATION" }, 
+                { id: "MISTYTERRAIN" }, { id: "PROTECT" }, { id: "RAINDANCE" }, { id: "REST" }, 
+                { id: "ROUND" }, { id: "SAFEGUARD" }, { id: "SLEEPTALK" }, { id: "SNORE" }, 
+                { id: "SUBSTITUTE" }, { id: "SURF" }, { id: "SWAGGER" }, { id: "TRIPLEAXEL" }, 
+                { id: "WATERFALL" }, { id: "WATERPULSE" }, { id: "HYDROCANNON" }, { id: "WATERPLEDGE" }
+            ],
+            egg: []
+        }
+    },
 ];
 

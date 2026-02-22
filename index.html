@@ -60,9 +60,13 @@
         function renderHome() {
             document.getElementById('search-container').style.display = "block";
             const container = document.getElementById('app');
-            misPokes.sort((a,b) => a.num - b.num);
+            
+            // FILTRO: Solo mostramos los que NO tengan un "-" en el ID (las formas base)
+            const pokesPrincipales = misPokes.filter(p => !p.id.toString().includes('-'));
+            
+            pokesPrincipales.sort((a,b) => a.num - b.num);
 
-            container.innerHTML = `<div class="grid">${misPokes.map(p => `
+            container.innerHTML = `<div class="grid">${pokesPrincipales.map(p => `
                 <div class="card" onclick="renderDetail('${p.id}')" data-name="${p.name}">
                     <img src="sprites/${p.id}.png" onerror="this.src='sprites/1.png'">
                     <p>#${p.num} <strong>${p.name}</strong></p>
@@ -76,7 +80,6 @@
             const p = misPokes.find(poke => poke.id === id);
             const container = document.getElementById('app');
 
-            // --- LÓGICA DE NAVEGACIÓN INTELIGENTE ---
             const getSmartId = (targetId) => {
                 const targetBase = misPokes.find(f => f.id === targetId);
                 if (!targetBase) return targetId;
@@ -86,7 +89,6 @@
                 return formaCorrespondiente ? formaCorrespondiente.id : targetId;
             };
 
-            // --- SECCIÓN DE FORMAS CENTRADA ---
             const formas = misPokes.filter(f => f.num === p.num);
             let selectorFormas = "";
             if (formas.length > 1) {

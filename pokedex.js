@@ -1007,7 +1007,7 @@ const misPokes = [
         credits: { design: "Rezatri", sprite: "Rezatri" },
         evolution: {
             prevo: null,
-            evos: [{ id: "15-jagara", name: "Hexgyem", method: "Movimiento tipo Siniestro" }]
+            evos: [{ id: "15", name: "Hexgyem", method: "Movimiento: Tipo Siniestro" }]
         },
         moves: {
             level: [
@@ -1048,7 +1048,7 @@ const misPokes = [
         flavor: "Al evolucionar, su cerebro se expande para procesar el miedo y la envidia ajena. Utiliza estas emociones negativas para potenciar sus ataques de energía oscura.",
         credits: { design: "Rezatri", sprite: "Rezatri" },
         evolution: {
-            prevo: { id: "14-jagara", name: "Secgyem", method: "Movimiento tipo Siniestro" },
+            prevo: { id: "14", name: "Secgyem", method: "Movimiento: Tipo Siniestro" },
             evos: []
         },
         moves: {
@@ -1546,6 +1546,205 @@ const misPokes = [
                 { id: "SURF" }, { id: "SWAGGER" }, { id: "SWORDSDANCE" }, { id: "THROATCHOP" },
                 { id: "WATERPLEDGE" }, { id: "WATERPULSE" }, { id: "WATERFALL" }, { id: "WHIRLPOOL" },
                 { id: "XSCISSOR" }, { id: "ZENHEADBUTT" }
+            ],
+            egg: []
+        }
+    },
+    {
+        id: "25",
+        num: 25,
+        name: "Trubbish",
+        category: "Bolsabasura",
+        types: ["Veneno"],
+        stats: { hp: 50, att: 50, def: 62, spA: 65, spD: 40, spe: 62 },
+        abilities: [
+            { type: "Habilidad 1", id: "STENCH" },
+            { type: "Habilidad 2", id: "STICKYHOLD" },
+            { type: "Oculta", id: "AFTERMATH" }
+        ],
+        flavor: "Pokémon nacido de la reacción química entre una bolsa de basura y residuos industriales.",
+        credits: { design: "GameFreak", sprite: "GameFreak" },
+        evolution: {
+            prevo: null,
+            evos: [{ id: "26", name: "Garbodor", method: "Nivel 36" }]
+        },
+        moves: {
+            level: [
+                { lv: "1", id: "POUND" }, { lv: "1", id: "POISONGAS" }, { lv: "3", id: "RECYCLE" },
+                { lv: "6", id: "ACIDSPRAY" }, { lv: "9", id: "AMNESIA" }, { lv: "12", id: "CLEARSMOG" },
+                { lv: "15", id: "TOXICSPIKES" }, { lv: "18", id: "SLUDGE" }, { lv: "21", id: "STOCKPILE" },
+                { lv: "21", id: "SWALLOW" }, { lv: "24", id: "TAKEDOWN" }, { lv: "27", id: "SLUDGEBOMB" },
+                { lv: "30", id: "TOXIC" }, { lv: "33", id: "BELCH" }, { lv: "37", id: "PAINSPLIT" },
+                { lv: "39", id: "GUNKSHOT" }, { lv: "42", id: "EXPLOSION" }
+            ],
+            tutor: [
+                { id: "AMNESIA" }, { id: "ATTRACT" }, { id: "CAPTIVATE" }, { id: "CONFIDE" },
+                { id: "CORROSIVEGAS" }, { id: "DARKPULSE" }, { id: "DOUBLETEAM" }, { id: "DRAINPUNCH" },
+                { id: "ENDURE" }, { id: "EXPLOSION" }, { id: "FACADE" }, { id: "FRUSTRATION" },
+                { id: "GIGADRAIN" }, { id: "GUNKSHOT" }, { id: "HIDDENPOWER" }, { id: "INFESTATION" },
+                { id: "MIMIC" }, { id: "NATURALGIFT" }, { id: "PAINSPLIT" }, { id: "PAYBACK" },
+                { id: "PROTECT" }, { id: "RAINDANCE" }, { id: "RECYCLE" }, { id: "REST" },
+                { id: "RETURN" }, { id: "ROCKBLAST" }, { id: "ROUND" }, { id: "SECRETPOWER" },
+                { id: "SEEDBOMB" }, { id: "SELFDESTRUCT" }, { id: "SLEEPTALK" }, { id: "SLUDGEBOMB" },
+                { id: "SLUDGEWAVE" }, { id: "SNORE" }, { id: "SPIKES" }, { id: "SPITE" },
+                { id: "SUBSTITUTE" }, { id: "SUNNYDAY" }, { id: "SWAGGER" }, { id: "THIEF" },
+                { id: "TOXIC" }, { id: "TOXICSPIKES" }, { id: "VENOMDRENCH" }, { id: "VENOSHOCK" }
+            ],
+            egg: [
+                { id: "AUTOTOMIZE" }, { id: "CURSE" }, { id: "HAZE" }, { id: "ROLLOUT" }, { id: "SANDATTACK" }
+            ]
+        }
+    },
+    {
+        id: "26",
+        num: 26,
+        name: "Garbodor",
+        category: "Vertedero",
+        types: ["Veneno"],
+        stats: { hp: 80, att: 95, def: 82, spA: 75, spD: 60, spe: 82 },
+        abilities: [
+            { type: "Habilidad 1", id: "STENCH" },
+            { type: "Habilidad 2", id: "WEAKARMOR" },
+            { type: "Oculta", id: "AFTERMATH" }
+        ],
+        flavor: "Traga basura y la integra en su cuerpo. Despide veneno líquido por la punta de los dedos de su mano derecha.",
+        credits: { design: "GameFreak", sprite: "GameFreak" },
+        evolution: {
+            prevo: { id: "25", name: "Trubbish", method: "Nivel 36" },
+            evos: []
+        },
+        moves: {
+            level: [
+                { lv: "1", id: "TAKEDOWN" }, { lv: "1", id: "METALCLAW" }, { lv: "1", id: "POUND" },
+                { lv: "1", id: "POISONGAS" }, { lv: "1", id: "RECYCLE" }, { lv: "1", id: "ACIDSPRAY" },
+                { lv: "9", id: "AMNESIA" }, { lv: "12", id: "CLEARSMOG" }, { lv: "15", id: "TOXICSPIKES" },
+                { lv: "18", id: "SLUDGE" }, { lv: "21", id: "STOCKPILE" }, { lv: "21", id: "SWALLOW" },
+                { lv: "24", id: "BODYSLAM" }, { lv: "27", id: "SLUDGEBOMB" }, { lv: "30", id: "TOXIC" },
+                { lv: "33", id: "BELCH" }, { lv: "39", id: "PAINSPLIT" }, { lv: "43", id: "GUNKSHOT" },
+                { lv: "48", id: "EXPLOSION" }
+            ],
+            tutor: [
+                { id: "AMNESIA" }, { id: "ATTRACT" }, { id: "BODYPRESS" }, { id: "BODYSLAM" },
+                { id: "CAPTIVATE" }, { id: "CONFIDE" }, { id: "CORROSIVEGAS" }, { id: "CROSSPOISON" },
+                { id: "DARKPULSE" }, { id: "DOUBLETEAM" }, { id: "DRAINPUNCH" }, { id: "ENDURE" },
+                { id: "EXPLOSION" }, { id: "FACADE" }, { id: "FLING" }, { id: "FOCUSBLAST" },
+                { id: "FRUSTRATION" }, { id: "GIGADRAIN" }, { id: "GIGAIMPACT" }, { id: "GUNKSHOT" },
+                { id: "HIDDENPOWER" }, { id: "HYPERBEAM" }, { id: "INFESTATION" }, { id: "MIMIC" },
+                { id: "NATURALGIFT" }, { id: "PAINSPLIT" }, { id: "PAYBACK" }, { id: "PROTECT" },
+                { id: "PSYCHIC" }, { id: "RAINDANCE" }, { id: "RECYCLE" }, { id: "REST" },
+                { id: "RETURN" }, { id: "ROCKBLAST" }, { id: "ROCKPOLISH" }, { id: "ROUND" },
+                { id: "SCREECH" }, { id: "SECRETPOWER" }, { id: "SEEDBOMB" }, { id: "SELFDESTRUCT" },
+                { id: "SLEEPTALK" }, { id: "SLUDGEBOMB" }, { id: "SLUDGEWAVE" }, { id: "SMACKDOWN" },
+                { id: "SNORE" }, { id: "SOLARBEAM" }, { id: "SPIKES" }, { id: "SPITE" },
+                { id: "STOMPINGTANTRUM" }, { id: "SUBSTITUTE" }, { id: "SUNNYDAY" }, { id: "SWAGGER" },
+                { id: "THIEF" }, { id: "THUNDERBOLT" }, { id: "TOXIC" }, { id: "TOXICSPIKES" },
+                { id: "VENOMDRENCH" }, { id: "VENOSHOCK" }
+            ],
+            egg: []
+        }
+    },
+    {
+        id: "25-jagara",
+        num: 25,
+        name: "Trubbish de Jagara",
+        category: "Bolsabasura",
+        types: ["Agua", "Veneno"],
+        stats: { hp: 50, att: 50, def: 62, spA: 40, spD: 62, spe: 65 },
+        abilities: [
+            { type: "Habilidad 1", id: "STICKYHOLD" },
+            { type: "Habilidad 2", id: "POISONPOINT" },
+            { type: "Oculta", id: "AFTERMATH" }
+        ],
+        flavor: "Cayó al océano y recogió a un Wishiwasi herido en su bolsa. El agua en su interior es una mezcla de toxinas y nutrientes marinos.",
+        credits: { design: "Desconocido", sprite: "Desconocido" },
+        evolution: {
+            prevo: null,
+            evos: [
+                { id: "26-jagara", name: "Garbodor de Jagara", method: "Movimiento tipo Veneno" },
+                { id: "27", name: "Wishbaggon", method: "Nivel 36" }
+            ]
+        },
+        moves: {
+            level: [
+                { lv: "1", id: "POUND" }, { lv: "1", id: "POISONGAS" }, { lv: "3", id: "RECYCLE" },
+                { lv: "5", id: "WATERGUN" }, { lv: "9", id: "AMNESIA" }, { lv: "12", id: "ACID" },
+                { lv: "15", id: "DOUBLESLAP" }, { lv: "18", id: "BUBBLEBEAM" }, { lv: "21", id: "PROTECT" },
+                { lv: "24", id: "TOXICSPIKES" }, { lv: "27", id: "BODYSLAM" }, { lv: "31", id: "SLUDGEBOMB" },
+                { lv: "34", id: "AQUARING" }, { lv: "37", id: "TOXIC" }, { lv: "40", id: "BELCH" },
+                { lv: "43", id: "PAINSPLIT" }
+            ],
+            tutor: [],
+            egg: []
+        }
+    },
+    {
+        id: "26-jagara",
+        num: 26,
+        name: "Garbodor de Jagara",
+        category: "Vertedero",
+        types: ["Agua", "Fantasma"],
+        stats: { hp: 80, att: 95, def: 82, spA: 60, spD: 82, spe: 75 },
+        abilities: [
+            { type: "Habilidad 1", id: "WEAKARMOR" },
+            { type: "Habilidad 2", id: "STENCH" },
+            { type: "Oculta", id: "AFTERMATH" }
+        ],
+        flavor: "El Wishiwasi que protegía no sobrevivió, y su espíritu ahora posee la bolsa de basura. Se mueve erráticamente impulsado por rencor ectoplásmico.",
+        credits: { design: "Desconocido", sprite: "Desconocido" },
+        evolution: {
+            prevo: { id: "25-jagara", name: "Trubbish de Jagara", method: "Movimiento tipo Veneno" },
+            evos: []
+        },
+        moves: {
+            level: [
+                { lv: "0", id: "SHADOWPUNCH" }, { lv: "1", id: "SHADOWPUNCH" }, { lv: "1", id: "METALCLAW" },
+                { lv: "1", id: "POUND" }, { lv: "1", id: "POISONGAS" }, { lv: "1", id: "RECYCLE" },
+                { lv: "1", id: "WATERGUN" }, { lv: "9", id: "AMNESIA" }, { lv: "12", id: "ACID" },
+                { lv: "15", id: "DOUBLESLAP" }, { lv: "18", id: "BUBBLEBEAM" }, { lv: "21", id: "PROTECT" },
+                { lv: "24", id: "TOXICSPIKES" }, { lv: "27", id: "BODYSLAM" }, { lv: "31", id: "SLUDGEBOMB" },
+                { lv: "34", id: "AQUARING" }, { lv: "37", id: "TOXIC" }, { lv: "40", id: "BELCH" },
+                { lv: "43", id: "PAINSPLIT" }, { lv: "46", id: "GUNKSHOT" }, { lv: "50", id: "SHADOWBALL" }
+            ],
+            tutor: [],
+            egg: []
+        }
+    },
+    {
+        id: "27",
+        num: 27,
+        name: "Wishbaggon",
+        category: "Acuario",
+        types: ["Agua", "Veneno"],
+        stats: { hp: 90, att: 70, def: 105, spA: 85, spD: 105, spe: 20 },
+        abilities: [
+            { type: "Habilidad 1", id: "REGENERATOR" },
+            { type: "Habilidad 2", id: "WATERABSORB" },
+            { type: "Oculta", id: "MULTISCALE" }
+        ],
+        flavor: "Con el cuidado de Trubbish los Wishiwasi que habitaban felizmente en su interior se multiplicaron. Y ahora viven en simbiosis formando un nuevo pokémon.",
+        credits: { design: "Desconocido", sprite: "Desconocido" },
+        evolution: {
+            prevo: { id: "25-jagara", name: "Trubbish de Jagara", method: "Nivel 36" },
+            evos: []
+        },
+        moves: {
+            level: [
+                { lv: "1", id: "SURF" }, { lv: "1", id: "SLUDGEWAVE" }, { lv: "1", id: "AQUARING" },
+                { lv: "1", id: "POUND" }, { lv: "1", id: "WATERGUN" }, { lv: "9", id: "AMNESIA" },
+                { lv: "15", id: "DOUBLESLAP" }, { lv: "21", id: "PROTECT" }, { lv: "24", id: "TOXICSPIKES" },
+                { lv: "27", id: "BODYSLAM" }, { lv: "34", id: "AQUARING" }, { lv: "40", id: "HYDROPUMP" },
+                { lv: "45", id: "INSTRUCT" }, { lv: "52", id: "SLUDGEWAVE" }, { lv: "60", id: "SOAK" }
+            ],
+            tutor: [
+                { id: "ALLYSWITCH" }, { id: "ATTRACT" }, { id: "CALMMIND" }, { id: "CONFIDE" },
+                { id: "DOUBLETEAM" }, { id: "ENDURE" }, { id: "FACADE" }, { id: "GIGADRAIN" },
+                { id: "GIGAIMPACT" }, { id: "HELPINGHAND" }, { id: "HIDDENPOWER" }, { id: "HYPERBEAM" },
+                { id: "HYDROPUMP" }, { id: "ICEBEAM" }, { id: "IRONDEFENSE" }, { id: "LIGHTSCREEN" },
+                { id: "PROTECT" }, { id: "RAINDANCE" }, { id: "RECYCLE" }, { id: "REFLECT" },
+                { id: "REST" }, { id: "RETURN" }, { id: "ROUND" }, { id: "SAFEGUARD" },
+                { id: "SECRETPOWER" }, { id: "SLEEPTALK" }, { id: "SLUDGEBOMB" }, { id: "SLUDGEWAVE" },
+                { id: "SNORE" }, { id: "SURF" }, { id: "SUBSTITUTE" }, { id: "SWAGGER" },
+                { id: "TOXIC" }, { id: "WATERPULSE" }
             ],
             egg: []
         }

@@ -1646,7 +1646,7 @@ const misPokes = [
     {
         id: "25-jagara",
         num: 25,
-        name: "Trubbish de Jagara",
+        name: "Trubbish",
         category: "Bolsabasura",
         types: ["Agua", "Veneno"],
         stats: { hp: 50, att: 50, def: 62, spA: 40, spD: 62, spe: 65 },
@@ -1656,7 +1656,7 @@ const misPokes = [
             { type: "Oculta", id: "AFTERMATH" }
         ],
         flavor: "Cayó al océano y recogió a un Wishiwasi herido en su bolsa. El agua en su interior es una mezcla de toxinas y nutrientes marinos.",
-        credits: { design: "Desconocido", sprite: "Desconocido" },
+        credits: { design: "Rezatri", sprite: "Rezatri" },
         evolution: {
             prevo: null,
             evos: [
@@ -1680,7 +1680,7 @@ const misPokes = [
     {
         id: "26-jagara",
         num: 26,
-        name: "Garbodor de Jagara",
+        name: "Garbodor",
         category: "Vertedero",
         types: ["Agua", "Fantasma"],
         stats: { hp: 80, att: 95, def: 82, spA: 60, spD: 82, spe: 75 },
@@ -1690,9 +1690,9 @@ const misPokes = [
             { type: "Oculta", id: "AFTERMATH" }
         ],
         flavor: "El Wishiwasi que protegía no sobrevivió, y su espíritu ahora posee la bolsa de basura. Se mueve erráticamente impulsado por rencor ectoplásmico.",
-        credits: { design: "Desconocido", sprite: "Desconocido" },
+        credits: { design: "Rezatri", sprite: "Rezatri" },
         evolution: {
-            prevo: { id: "25-jagara", name: "Trubbish de Jagara", method: "Movimiento tipo Veneno" },
+            prevo: { id: "25-jagara", name: "Trubbish", method: "Movimiento tipo Veneno" },
             evos: []
         },
         moves: {
@@ -1721,10 +1721,10 @@ const misPokes = [
             { type: "Habilidad 2", id: "WATERABSORB" },
             { type: "Oculta", id: "MULTISCALE" }
         ],
-        flavor: "Con el cuidado de Trubbish los Wishiwasi que habitaban felizmente en su interior se multiplicaron. Y ahora viven en simbiosis formando un nuevo pokémon.",
-        credits: { design: "Desconocido", sprite: "Desconocido" },
+        flavor: "Con el cuidado de Trubbish los Wishiwasi que habitaban felizmente en su interior se multiplicaron desarrollando resistencia al veneno. Y ahora viven en simbiosis formando un nuevo pokémon.",
+        credits: { design: "Rezatri", sprite: "Rezatri" },
         evolution: {
-            prevo: { id: "25-jagara", name: "Trubbish de Jagara", method: "Nivel 36" },
+            prevo: { id: "25-jagara", name: "Trubbish", method: "Nivel 36" },
             evos: []
         },
         moves: {
